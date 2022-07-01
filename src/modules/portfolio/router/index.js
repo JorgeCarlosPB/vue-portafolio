@@ -4,22 +4,22 @@ export default{
     component: () => import(/* webpackChunkName: "portfolio" */ '@/modules/portfolio/layouts/PortfolioLayout.vue'),
     children: [
         {
-            path: '',
+            path: 'phome',
             name: 'phome',
             component: () => import(/* webpackChunkName: "phome" */ '@/modules/portfolio/views/PortfolioHome.vue')
         },
         {
-            path: '',
+            path: 'about',
             name: 'pabout',
             component: () => import(/* webpackChunkName: "pabout" */ '@/modules/portfolio/views/PortfolioAbout.vue')
         },
         {
-            path: '',
+            path: 'projects',
             name: 'pprojects',
             component: () => import(/* webpackChunkName: "pabout" */ '@/modules/portfolio/views/PortfolioProjects.vue')
         },
         {
-            path: '',
+            path: 'contact',
             name: 'pcontact',
             component: () => import(/* webpackChunkName: "pabout" */ '@/modules/portfolio/views/PortfolioContact.vue')
         },
