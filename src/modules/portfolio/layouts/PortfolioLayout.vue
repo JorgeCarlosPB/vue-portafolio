@@ -37,52 +37,12 @@ export default {
     align-items: center;  /*Con esto centramos todo verticalmente*/
     /* justify-content: center; Con esto centramos todo horizontalmente */
     flex-direction: row;
-}
-
-.navBar{
-    margin-left: auto;  
-    order: 2;
-    /* max-width: 15%;
-    min-width: 10%; */
-}
-
-.navBar ul {
-    display: flex;
-    flex-direction: column;
-    border-radius: 20px 0 0 20px;
-    list-style-type: none;
-    overflow: hidden;
-}
-
-.navBar li{
-    background-color: orange;
-}
-
-.navBar li  a{
-    display: block;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    padding: 25px 0px 25px 0px;
-}
-
-.navBar li a span{
-    visibility: hidden;
-    font-size: 25px;
-}
-
-.navBar li a:hover span{
-    visibility: visible;
-}
-
-.navBar li:hover{
-    background-color: black;
+    justify-content: space-around;
 }
 
 .content{
     margin: auto;
     overflow: auto;
-
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -92,7 +52,7 @@ export default {
     background-color:  orange ;
     width: 80%;
     height: 70%;
-    padding: 2% 2% 2% 2%;
+    /*padding: 3% 3% 3% 3%;*/
  
     align-items: center;
 }

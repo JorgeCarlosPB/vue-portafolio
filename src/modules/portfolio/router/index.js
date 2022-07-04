@@ -4,7 +4,7 @@ export default{
     component: () => import(/* webpackChunkName: "portfolio" */ '@/modules/portfolio/layouts/PortfolioLayout.vue'),
     children: [
         {
-            path: 'phome',
+            path: 'home',
             name: 'phome',
             component: () => import(/* webpackChunkName: "phome" */ '@/modules/portfolio/views/PortfolioHome.vue')
         },

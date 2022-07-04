@@ -1,30 +1,69 @@
-{
-    "ingenieros":[
-        {
-            "ci":"9702283",
-            "name": "Jorge Carlos",
-            "lastName": "Pérez Barja",
-            "phone": "78666661"
-        },
-        {
-            "ci":"111111",
-            "name": "Juan Víctor",
-            "lastName": "Serrudo Chávez",
-            "phone": "66666666"
-        }  
-    ],
-    "abogados":[
-        {
-            "ci":"9702283",
-            "name": "Patricia",
-            "lastName": "Rocabado Saveedra",
-            "phone": "78666661"
-        },
-        {
-            "ci":"111111",
-            "name": "Juan ",
-            "lastName": "Lanchipa Chávez",
-            "phone": "66666666"
-        }  
-    ] 
-}
+[
+    {
+        "idDb": 1,
+        "numeroDocumento":"9702283",
+        "nombre": "Jorge Carlos",
+        "primerApellido": "Pérez",
+        "segundoApellido": "Barja",
+        "celular": "78666661",
+        "esAbogado": 0,
+        "esProfesor": 0,
+        "esInformatico": 1,
+        "profesion": "ESTUDIANTE",
+        "descripcion": "Labore dolore minim non mollit. Minim labore consequat culpa officia mollit Lorem sunt ex deserunt. Non reprehenderit sunt Lorem nostrud aute adipisicing ipsum et dolor magna ex dolore tempor. Quis est dolor velit amet consectetur ullamco sit laborum fugiat sint magna sunt nostrud. Qui minim laborum id cillum do.",
+        "fotografia": "@/modules/portfolio/helpers/imgs/foto_perfil.jepg"
+        
+    }, 
+    {
+        "idDb": 2,
+        "numeroDocumento":"111111",
+        "nombre": "Juan Víctor",
+        "primerApellido": "Serrudo",
+        "segundoApellido": "Chávez",
+        "celular": "66666666",
+        "esAbogado": 0,
+        "esProfesor": 0,
+        "esInformatico": 1,
+        "profesion": "INGENIERO DE SISTEMAS",
+        "descripcion": "Nostrud quis occaecat consectetur adipisicing fugiat laboris id. Cupidatat elit voluptate sint ea consequat est elit est quis incididunt. Deserunt aute officia laboris nisi deserunt. Mollit voluptate non anim tempor dolore in eu nostrud id. Laboris deserunt id aliqua adipisicing duis duis occaecat veniam eiusmod incididunt."
+    },
+    {
+        "idDb": 3,
+        "numeroDocumento":"222222",
+        "nombre": "Paul",
+        "primerApellido": "Caihuara",
+        "segundoApellido": "Caba",
+        "celular": "945471",
+        "esAbogado": 0,
+        "esProfesor": 0,
+        "esInformatico": 1,
+        "profesion": "INGENIERO DE SISTEMAS",
+        "descripcion": "Dolor id ullamco proident elit elit cupidatat cupidatat fugiat. Nostrud et laboris aliqua sint est aute aute minim. Quis nisi voluptate sit culpa ullamco proident tempor et. Nulla anim proident anim esse adipisicing cupidatat eu. Eiusmod cillum aliquip exercitation ad in laborum proident qui mollit enim eu veniam aliqua. Consectetur voluptate nostrud irure est."
+    }, 
+    {
+        "idDb": 4,
+        "numeroDocumento":"12345678",
+        "nombre": "Patricia",
+        "primerApellido": "Rocabado",
+        "segundoApellido": "Saveedra",
+        "celular": "78666661",
+        "esAbogado": 1,
+        "esProfesor": 0,
+        "esInformatico": 0,
+        "profesion": "ABOGADO",
+        "descripcion": "Id non consequat nulla elit ipsum ad minim laborum eiusmod reprehenderit deserunt aute exercitation in. Ex pariatur non eiusmod fugiat tempor cupidatat sint id amet. Labore Lorem laboris eiusmod aliquip commodo non. Duis enim amet aliquip incididunt cillum incididunt est nisi do officia duis cillum sint."
+    },
+    {
+        "idDb": 5,
+        "numeroDocumento":"001100",
+        "nombre": "Juan ",
+        "primerApellido": "Lanchipa",
+        "segundoApellido": "Chávez",
+        "celular": "66666666",
+        "esAbogado": 1,
+        "esProfesor": 0,
+        "esInformatico": 0,
+        "profesion": "ABOGADO",
+        "descripcion": "Quis mollit est nulla magna in commodo. Deserunt ea ex consequat id ipsum dolore nulla anim non labore. Est laboris pariatur ullamco anim ad tempor enim. Duis esse nostrud aute nisi sit."
+    }  
+]

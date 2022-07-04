@@ -20,7 +20,7 @@ const router = createRouter({
       component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
     },
     {
-      path: '/portfolio',
+      path: '/portfolio/:ci',
       ...portfolioRouter
     },
   ]
