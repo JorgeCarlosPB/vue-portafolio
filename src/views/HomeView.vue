@@ -76,8 +76,7 @@ export default{
         (ingenieros.value).push(element)
     });
 
-    console.log(abogados.value)
-    console.log(ingenieros.value)
+    
     
     /*
     async function obtenerDatos(){

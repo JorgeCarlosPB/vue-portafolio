@@ -14,8 +14,13 @@ import { faUser } from '@fortawesome/free-solid-svg-icons'
 import { faHomeUser } from '@fortawesome/free-solid-svg-icons'
 import { faBriefcase } from '@fortawesome/free-solid-svg-icons'
 import { faPhone } from '@fortawesome/free-solid-svg-icons'
+import { faFacebook } from '@fortawesome/free-brands-svg-icons'
+import { faInstagramSquare } from '@fortawesome/free-brands-svg-icons'
+import { faSun } from '@fortawesome/free-solid-svg-icons'
+import { faMoon } from '@fortawesome/free-solid-svg-icons'
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
-library.add(faUserSecret, faHomeUser, faUser, faBriefcase, faPhone );
+library.add(faUserSecret, faHomeUser, faUser, faBriefcase, faPhone, faFacebook, faInstagramSquare, faSun, faMoon, faLinkedin);
 //
 
 
