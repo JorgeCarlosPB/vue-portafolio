@@ -4,7 +4,7 @@ import portfolio from '@/modules/portfolio/store/index.js'
 
 const store = createStore({
     modules:{
-        // portfolio: portfolio
+        portfolio: portfolio
         
     }
 

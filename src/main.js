@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
-// import store from './store/index'
+import store from './store/index'
 import './styles/styles.scss'
 
 //Importación de iconos de fontawesome
@@ -25,7 +25,7 @@ library.add(faUserSecret, faHomeUser, faUser, faBriefcase, faPhone, faFacebook, 
 
 
 const app = createApp(App)
-// app.use(store)
+app.use(store)
 app.use(router)
 app.component('font-awesome-icon', FontAwesomeIcon)
 app.mount('#app')

@@ -76,8 +76,7 @@ export default{
         (ingenieros.value).push(element)
     });
 
-    
-    
+       
     /*
     async function obtenerDatos(){
       const response = await ('dataFuncionarios');

@@ -1,20 +1,23 @@
 <template>
-  <div class="temas">
+
+    <div class="temas">
     <button 
-      v-if= "!mode"
-      @click="changeToLight">
+      v-if="currentMode.mode == 'dark'"
+      @click="change">
       <font-awesome-icon icon="fa-solid fa-sun" size="2x" />
+      aclarar
     </button> 
 
     <button 
-      v-if="mode"
-      @click="changeToDark"> 
+      v-else
+      @click="change">
       <font-awesome-icon icon="fa-solid fa-moon" size="2x" />
+      oscurecer
     </button>
 
   </div>
 
-  <div class="cuerpo">
+  <div class="cuerpo" :style="{backgroundColor: currentMode.color1}">
 
     <div class="homecolor-box"></div>
 
@@ -22,7 +25,8 @@
     <NavBar />
 
     <!--Contenido de cada menú-->
-    <div class="content" :style="{backgroundColor: styles.contenido}">            
+    <div class="content" >       
+         
         <router-view v-slot="{Component, route}">
           <keep-alive>
             <component :is="Component" :key="route.name"/>
@@ -36,6 +40,10 @@
 <script>
 import { defineAsyncComponent } from 'vue';
 import { ref } from 'vue';
+import useThemes from '../composables/useThemes';
+//import { useRoute, useRouter } from 'vue-router';
+import { useRouter, useRoute } from 'vue-router'
+
 
 export default {
     components: { 
@@ -43,26 +51,26 @@ export default {
     },
 
     setup(){
-      const mode=ref(true)
-      const styles = ref ({cuerpo: '#eeeeee', contenido: 'white' })
-
-      const changeToDark = ()=>{
-        mode.value = false
-        styles.value = {cuerpo: 'black', contenido: '#212121' }
-      }
-
-      const changeToLight = ()=>{
-        mode.value = true
-        styles.value = {cuerpo: '#eeeeee', contenido: 'white' }
-      }
+      const router = useRouter()     
+      const {currentTheme, all,currentMode, light,dark , changeTheme} = useThemes()
+      //const actual = ref(currentMode.value[0])  
+      //console.log(currentMode.value[0].mode)
+      //console.log(actual.value.mode)
+      console.log(currentMode.value)
+      const color = ref('red')
+      
 
       return{
-        mode,
         
-        changeToLight,
-        changeToDark,
-        styles,
-
+        currentTheme,
+        currentMode,
+        all,       
+        change:()=>{
+          //window.location.reload()
+          //router.push({name: 'phome'})
+          changeTheme()
+        },         
+        color
 
       }
     }
@@ -70,7 +78,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 
 .temas{
   position: fixed;
@@ -79,7 +87,7 @@ export default {
 }
 
 .cuerpo{
-    background-color: gray;
+    background-color: (color);
     width: 100%;
     height: 100vh;
 

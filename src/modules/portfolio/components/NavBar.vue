@@ -30,8 +30,8 @@ import styles from "@/modules/portfolio/layouts/PortfolioLayout.vue"
 
 export default {
     setup(){
-        console.log('estilos')
-        console.log(styles.value)
+        // console.log('estilos')
+        // console.log(styles.value)
     }
 }
 </script>
