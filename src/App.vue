@@ -11,7 +11,7 @@
 @import '@/assets/base.css';
 *{
     margin: 0%;
-    padding: 0%;
+    padding: 0;
     border: 0;
 }
 </style>

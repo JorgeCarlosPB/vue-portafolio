@@ -1,22 +1,27 @@
 <template>
-  <!-- <div class="content"> -->
-    <div class="foto">
-        <img :src="persona.fotografia" alt="fotografia">
+  <div class="contenido">
+    <div class="imagen">
+        <img :src="persona.fotografia" alt="fotografia" class="foto">
     </div>
 
     <div class="description">
       <div class="titulo">
-        <h1> {{persona.nombre}} {{persona.primerApellido}} {{persona.segundoApellido}}</h1>
+        <h1 :style="{color: currentMode.color3}"> 
+          {{persona.nombre}} {{persona.primerApellido}} {{persona.segundoApellido}}
+        </h1>
         <hr class="linea">
       </div>
 
       <div class="redes">
         <a v-if="persona.facebook" 
-          :href="persona.facebook" target="_blank"><font-awesome-icon class="icon" icon="fa-brands fa-facebook" size="2x" inverse/></a>
+          :href="persona.facebook" target="_blank">
+            <font-awesome-icon class="icon" icon="fa-brands fa-facebook" size="2x" inverse :style="{color: currentMode.color3}"/></a>
         <a v-if="persona.instagram" 
-          :href="persona.instagram" target="_blank"><font-awesome-icon class="icon" icon="fa-brands fa-instagram-square" size="2x" inverse/></a>
+          :href="persona.instagram" target="_blank">
+          <font-awesome-icon class="icon" icon="fa-brands fa-instagram-square" size="2x" inverse :style="{color: currentMode.color3}"/></a>
         <a v-if="persona.linkedin" 
-          :href="persona.linkedin" target="_blank"><font-awesome-icon class="icon" icon="fa-brands fa-linkedin" size="2x" inverse/></a>
+          :href="persona.linkedin" target="_blank">
+          <font-awesome-icon class="icon" icon="fa-brands fa-linkedin" size="2x" inverse :style="{color: currentMode.color3}"/></a>
       </div>
 
       <div class="detalle">
@@ -37,31 +42,26 @@
       </div>
       
     </div>
-  <!-- </div> -->
+  </div>
   
 </template>
 
 <script>
 import { ref } from 'vue'
 import dataFuncionarios from '@/modules/portfolio/helpers/dataFuncionarios.json'
-import { useRoute } from 'vue-router';
+import useThemes from '../composables/useThemes';
+
+import getPerson from '../composables/getPerson';
 
 export default {
   setup(){
-    const route = useRoute()
-    const ci = route.params.ci;
-    const persona = ref()
-   
-    dataFuncionarios.forEach(element => {
-      if(element.numeroDocumento == ci)
-        persona.value = element
-    });
-    
-    //console.log(persona.value)
+    const {currentMode} = useThemes()
+    const {persona} = getPerson()
 
     return{
-      ci,
-      persona
+   
+      persona,
+      currentMode,
     }
 
   }
@@ -69,18 +69,31 @@ export default {
 }
 </script >
 
-<style scope lang="scss">
-.content .foto{
-    width: 35%;
-    justify-items: center;
+<style lang="scss" scoped>
+.contenido{
+    //@includemargin: auto;
+    //overflow: auto;
     display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
+
+    width: auto;
+    //height: 100vh;
+    height: 100%;
+    //background-color:  #212121;
 }
 
-.content .foto img{
-    width: 90%; 
-    // height: auto;
-    // margin-top: 10%;
+.contenido .imagen{
+    width: 35%;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+
+}
+
+.imagen .foto{
+    width: 100%; 
     border-radius: 10px;
 }
 
@@ -109,6 +122,8 @@ export default {
           width: 200px;
           height: 10px;
           border-radius: 2px;
+          z-index: 5;
+          
         }
     }
 
@@ -133,15 +148,20 @@ export default {
 .redes{
   display: flex;
   justify-content: center;
-  justify-content: center;
+  align-content: center;
 
   a{
     margin: 0 15px 0 15px;
 
-    .icon:hover{
+    .icon:hover {
       color: #ff651c;
+      font-size: 35px;
+      background-color: #ff651c;
+      //border-radius: 50px;
+
     }
   }
+  
   
 }
 

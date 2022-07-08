@@ -1,17 +1,88 @@
 <template>
-  Este es el about de mi portfolio
-  <!-- <p>{{currentMode}}</p> -->
+  <div class="contenido">
+    <div class="titulo">
+      <h1 :style="{color:currentMode.color3}">Acerca de <span >mí</span></h1> 
+    </div>
+
+
+    
+    <div class="description">
+      <div class="imagen">
+        <img :src="persona.fotografia" alt="fotografia" class="foto">
+      </div>
+      
+      <div class="contenedor">
+        <div class="detalle">
+          <h3 :style="{color:currentMode.color3}">¿Quién soy?</h3>
+          <h2 :style="{color:currentMode.color3}">Mi nombre es {{persona.nombre}} {{persona.primerApellido}} {{persona.segudnoApellido}},
+              soy <span :style="{color:'#ff651c'}">{{persona.profesion}}</span>
+          </h2>
+          <p>{{persona.descripcion}}</p>
+        </div>
+
+        <h2 :style="{color:currentMode.color3}">Información personal</h2>
+        <div class="info">
+          
+          <div class="info1">
+            <span class="clave">Nombre :</span>            <span class="valor" :style="{color:currentMode.color3}">{{persona.nombre}}</span>          <br>
+            <span class="clave">Apellido Paterno :</span>  <span class="valor" :style="{color:currentMode.color3}">{{persona.primerApellido}}</span>  <br>
+            <span class="clave">Apellido Materno :</span>  <span class="valor" :style="{color:currentMode.color3}">{{persona.segundoApellido}}</span> <br>
+            <span class="clave">Dirección :</span>         <span class="valor" :style="{color:currentMode.color3}">{{persona.primerApellido}}</span>  <br>
+            <span class="clave">Lugar nacimiento :</span>  <span class="valor" :style="{color:currentMode.color3}">{{persona.primerApellido}}</span>  <br>
+          </div>
+
+          <div class="info1">
+            <span class="clave">Nombre :</span>            <span class="valor" :style="{color:currentMode.color3}">{{persona.nombre}}</span>          <br>
+            <span class="clave">Apellido Paterno :</span>  <span class="valor" :style="{color:currentMode.color3}">{{persona.primerApellido}}</span>  <br>
+            <span class="clave">Apellido Materno :</span>  <span class="valor" :style="{color:currentMode.color3}">{{persona.segundoApellido}}</span> <br>
+            <span class="clave">Dirección :</span>         <span class="valor" :style="{color:currentMode.color3}">{{persona.primerApellido}}</span>  <br>
+            <span class="clave">Lugar nacimiento :</span>  <span class="valor" :style="{color:currentMode.color3}">{{persona.primerApellido}}</span>  <br>
+          </div>
+        </div>
+
+        <button class="descarga">Descargar CV</button>
+        <div class="redes">
+        <a v-if="persona.facebook" 
+          :href="persona.facebook" target="_blank">
+            <font-awesome-icon class="icon" icon="fa-brands fa-facebook" size="2x" inverse :style="{color: currentMode.color3}"/></a>
+        <a v-if="persona.instagram" 
+          :href="persona.instagram" target="_blank">
+          <font-awesome-icon class="icon" icon="fa-brands fa-instagram-square" size="2x" inverse :style="{color: currentMode.color3}"/></a>
+        <a v-if="persona.linkedin" 
+          :href="persona.linkedin" target="_blank">
+          <font-awesome-icon class="icon" icon="fa-brands fa-linkedin" size="2x" inverse :style="{color: currentMode.color3}"/></a>
+        </div>
+
+      </div>
+
+
+    </div>
+
+    <div class="resume">
+        <h1>Mi formación</h1>
+
+        <h2>Educación</h2>
+
+        <h2>Experiencia</h2>
+
+      </div>
+
+  </div>
 </template>
 
 <script>
+import getPerson from '../composables/getPerson';
 import useThemes from '../composables/useThemes';
 
 export default {
   
   setup(){
-    const {currentTheme, all, light,dark , changeTheme} = useThemes()
+      const {currentMode} = useThemes()
+      const {persona}=getPerson()
 
     return{
+      currentMode,
+      persona
       
     }
   }
@@ -19,6 +90,61 @@ export default {
 }
 </script>
 
-<style>
+<style scoped lang="scss">
+
+.contenido{
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.titulo{
+  display: flex;
+  justify-content: center;
+  h1{
+    font-size: 60px; 
+  }
+  hr{
+    color: black;
+  }
+}
+
+.description{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  .imagen{
+  width: 25%;
+    .foto{
+      width: 100%;
+
+    }
+  }
+  .contenedor{
+    width: 65%;
+
+    .detalle{
+      p{
+        color: #888888;
+      }
+    }
+  }
+
+  .info{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+ 
+    .clave{
+      color: #888888;
+
+    }
+    .info1{
+      width: 40%;
+    }
+  }
+}
 
 </style>

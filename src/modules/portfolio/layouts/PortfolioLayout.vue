@@ -22,10 +22,10 @@
     <div class="homecolor-box"></div>
 
     <!--Barra de navegación-->
-    <NavBar />
+    <NavBar :style="{backgroundColor: currentMode.color2}"/>
 
     <!--Contenido de cada menú-->
-    <div class="content" >       
+    <div class="content" :style="{backgroundColor: currentMode.color2}">       
          
         <router-view v-slot="{Component, route}">
           <keep-alive>
@@ -41,7 +41,6 @@
 import { defineAsyncComponent } from 'vue';
 import { ref } from 'vue';
 import useThemes from '../composables/useThemes';
-//import { useRoute, useRouter } from 'vue-router';
 import { useRouter, useRoute } from 'vue-router'
 
 
@@ -52,25 +51,21 @@ export default {
 
     setup(){
       const router = useRouter()     
-      const {currentTheme, all,currentMode, light,dark , changeTheme} = useThemes()
-      //const actual = ref(currentMode.value[0])  
-      //console.log(currentMode.value[0].mode)
-      //console.log(actual.value.mode)
-      console.log(currentMode.value)
-      const color = ref('red')
-      
+      const {all,currentMode, light,dark , changeTheme} = useThemes()
+      const rojo = ref('red')
+      //rootElement.style.setProperty(“--rojo”, color);
+
+
 
       return{
         
-        currentTheme,
+       
         currentMode,
         all,       
         change:()=>{
-          //window.location.reload()
-          //router.push({name: 'phome'})
           changeTheme()
-        },         
-        color
+        }, 
+        rojo        
 
       }
     }
@@ -82,12 +77,11 @@ export default {
 
 .temas{
   position: fixed;
-  margin-top: 10%;
+  margin-top: 7%;
   z-index: 3;
 }
 
 .cuerpo{
-    background-color: (color);
     width: 100%;
     height: 100vh;
 
@@ -95,7 +89,7 @@ export default {
     align-items: center;  /*Con esto centramos todo verticalmente*/
     /* justify-content: center; Con esto centramos todo horizontalmente */
     flex-direction: row;
-    justify-content: space-around;
+    //justify-content: space-around;
     
 }
 
@@ -115,20 +109,14 @@ export default {
 .content{
     margin: auto;
     overflow: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-
-    order: 1;
-    border-radius: 30px;
-    background-color:  #212121;
     width: 85%;
     height: 80%;
+    order: 1;
+    border-radius: 30px;
     z-index: 2;
     padding: 2% 2% 2% 2%;
- 
-    align-items: center;
 }
+
 
 @media (max-width: 800px) {
     .cuerpo{

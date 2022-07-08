@@ -29,7 +29,10 @@
         "esInformatico": 1,
         "profesion": "INGENIERO DE SISTEMAS",
         "descripcion": "Nostrud quis occaecat consectetur adipisicing fugiat laboris id. Cupidatat elit voluptate sint ea consequat est elit est quis incididunt. Deserunt aute officia laboris nisi deserunt. Mollit voluptate non anim tempor dolore in eu nostrud id. Laboris deserunt id aliqua adipisicing duis duis occaecat veniam eiusmod incididunt.",
-        "fotografia": "@/modules/portfolio/helpers/imgs/foto.jpg"
+        "fotografia": "https://media-exp1.licdn.com/dms/image/C4D03AQG5ZlGoHEFifg/profile-displayphoto-shrink_200_200/0/1620822114364?e=2147483647&v=beta&t=3TqwP4pd_Eh3IiNuh9adW9aqnSDHVSFiMaq-24C6p48",
+        "facebook": "https://www.facebook.com/juanvsc",
+        "instagram": "https://wwww.instagram.com",
+        "linkedin": "https://www.linkedin.com"
     },
     {
         "idDb": 3,
@@ -70,5 +73,23 @@
         "esInformatico": 0,
         "profesion": "ABOGADO",
         "descripcion": "Quis mollit est nulla magna in commodo. Deserunt ea ex consequat id ipsum dolore nulla anim non labore. Est laboris pariatur ullamco anim ad tempor enim. Duis esse nostrud aute nisi sit."
+    },
+    {
+        "idDb": 1,
+        "numeroDocumento":"9461254",
+        "nombre": "Alejandro",
+        "primerApellido": "Castellón",
+        "segundoApellido": "",
+        "celular": "78666661",
+        "esAbogado": 0,
+        "esProfesor": 0,
+        "esInformatico": 1,
+        "profesion": "INGENIERO DE SISTEMAS",
+        "descripcion": "Labore dolore minim non mollit. Minim labore consequat culpa officia mollit Lorem sunt ex deserunt. Non reprehenderit sunt Lorem nostrud aute adipisicing ipsum et dolor magna ex dolore tempor. Quis est dolor velit amet consectetur ullamco sit laborum fugiat sint magna sunt nostrud. Qui minim laborum id cillum do.",
+        "fotografia": "https://scontent.fvvi1-2.fna.fbcdn.net/v/t1.6435-9/97554417_10157256608723148_4147959258471727104_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=174925&_nc_ohc=2ABHFClAuBAAX8_Fi61&_nc_ht=scontent.fvvi1-2.fna&oh=00_AT95ECryYiRV-GP_5hB7I4V52ZwOYSL3TttXJu8REs144w&oe=62EE800F",
+        "facebook": "https://www.facebook.com/gnfranz",
+        "instagram": "https://wwww.instagram.com",
+        "linkedin": "https://www.linkedin.com"
+        
     }  
 ]

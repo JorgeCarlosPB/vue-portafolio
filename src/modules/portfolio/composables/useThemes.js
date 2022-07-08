@@ -5,13 +5,10 @@ import { useStore } from 'vuex'
 const useThemes = () => {
     const store = useStore()
 
-    const currentTheme = ref('dark')
-
     const changeTheme = () =>{store.commit('portfolio/changeTheme')}
         
 
         return{
-            currentTheme,
             //Tipos de modos oscuro, claro
             all: computed(()=>store.getters['portfolio/allMode']),
             light: computed(()=>store.getters['portfolio/lightMode']),
