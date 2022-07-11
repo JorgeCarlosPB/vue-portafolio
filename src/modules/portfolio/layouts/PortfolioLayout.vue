@@ -100,7 +100,7 @@ export default {
   width: 136%;
   transform: rotate(-57deg);
   left: -91%;
-  top: -48%;
+  top: -50%;
   z-index: 1;
   box-shadow: 0 0 10px rgb(0 0 0 / 40%);
   outline: 0 !important;
@@ -109,22 +109,60 @@ export default {
 .content{
     margin: auto;
     overflow: auto;
-    width: 85%;
-    height: 80%;
+    width: 88%;
+    height: 88%;
     order: 1;
     border-radius: 30px;
     z-index: 2;
-    padding: 2% 2% 2% 2%;
+    padding: 3% 3% 3% 3%;
 }
 
 
 @media (max-width: 800px) {
+
+  .homecolor-box{
+    left: -110%;
+    top: -65%;
+  }
     .cuerpo{
         flex-direction: column;
+
     }
     .content{
         flex-direction: column;
+        width: 93%;
     }
 }
+
+@media (max-width: 575.98px) { 
+  .homecolor-box{
+    height: 180%;
+    width: 110%;
+    left: -80%;
+    top: -50%;
+    transform: rotate(25deg);
+  } 
+}
+
+// `md` applies to small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {
+  
+ }
+
+// `lg` applies to medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+  
+ 
+ }
+
+// `xl` applies to large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {
+  
+}
+
+// `xxl` applies to x-large devices (large desktops, less than 1400px)
+@media (max-width: 1399.98px) { 
+  
+ }
 
 </style>

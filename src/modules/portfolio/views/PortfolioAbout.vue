@@ -40,41 +40,34 @@
           </div>
         </div>
 
-        <button class="descarga">Descargar CV</button>
-        <div class="redes">
-        <a v-if="persona.facebook" 
-          :href="persona.facebook" target="_blank">
-            <font-awesome-icon class="icon" icon="fa-brands fa-facebook" size="2x" inverse :style="{color: currentMode.color3}"/></a>
-        <a v-if="persona.instagram" 
-          :href="persona.instagram" target="_blank">
-          <font-awesome-icon class="icon" icon="fa-brands fa-instagram-square" size="2x" inverse :style="{color: currentMode.color3}"/></a>
-        <a v-if="persona.linkedin" 
-          :href="persona.linkedin" target="_blank">
-          <font-awesome-icon class="icon" icon="fa-brands fa-linkedin" size="2x" inverse :style="{color: currentMode.color3}"/></a>
-        </div>
+        <button class="descarga">Descargar CV  <font-awesome-icon icon="fa-solid fa-download" /></button>
+        <SocialNet/>
 
       </div>
-
-
     </div>
 
-    <div class="resume">
-        <h1>Mi formación</h1>
+    <MyResume/>
 
-        <h2>Educación</h2>
+    <MySkills/>
 
-        <h2>Experiencia</h2>
 
-      </div>
+
+    
 
   </div>
 </template>
 
 <script>
+import { defineAsyncComponent } from 'vue';
 import getPerson from '../composables/getPerson';
 import useThemes from '../composables/useThemes';
 
 export default {
+  components: { 
+      SocialNet: defineAsyncComponent(()=>import('../components/SocialNet.vue')),
+      MyResume: defineAsyncComponent(()=>import('../components/MyResume.vue')),
+      MySkills: defineAsyncComponent(()=>import('../components/MySkills.vue')),
+  },
   
   setup(){
       const {currentMode} = useThemes()
@@ -112,17 +105,17 @@ export default {
 .description{
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
 
   .imagen{
-  width: 25%;
+  width: 27%;
     .foto{
       width: 100%;
 
     }
   }
   .contenedor{
-    width: 65%;
+    width: 70%;
 
     .detalle{
       p{
@@ -145,6 +138,19 @@ export default {
       width: 40%;
     }
   }
+}
+
+.descarga{
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #ff651c;
+  color: white;
+}
+
+.descarga:hover{
+  border: solid 2px #ff651c;
+  background-color: white;
+  color: black;
 }
 
 </style>

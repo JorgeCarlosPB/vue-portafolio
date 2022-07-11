@@ -12,9 +12,82 @@
         "profesion": "ESTUDIANTE",
         "descripcion": "Labore dolore minim non mollit. Minim labore consequat culpa officia mollit Lorem sunt ex deserunt. Non reprehenderit sunt Lorem nostrud aute adipisicing ipsum et dolor magna ex dolore tempor. Quis est dolor velit amet consectetur ullamco sit laborum fugiat sint magna sunt nostrud. Qui minim laborum id cillum do.",
         "fotografia": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhhWmcSb9CH1TeQsd_SoRDx8d4Ab72lfaNWwg_QVoLM87oggu9Z-DY1px63LXCsHRBdls&usqp=CAU",
-        "facebook": "https://www.facebook.com/jorgecarlos.perezbarja",
-        "instagram": "https://wwww.instagram.com",
-        "linkedin": "https://www.linkedin.com"
+        "redes":[
+            {
+            "facebook": "https://www.facebook.com/jorgecarlos.perezbarja",
+            "instagram": "https://wwww.instagram.com",
+            "linkedin": "https://www.linkedin.com",
+            "twitter": "https://www.twitter.com",
+            "github": "https://www.github.com"
+            } 
+        ],
+        "educacion":[
+            {
+                "id":"1",
+                "nombre":"Primaria",
+                "institucion": "San Xavier B",
+                "descripcion": "Dolor id ullamco proident elit elit cupidatat cupidatat fugiat. Nostrud et laboris aliqua sint est aute aute minim. Quis nisi voluptate sit culpa ullamco proident tempor et.",
+                "fechaInicio":"1-febrero-2005",
+                "fechaFin": "30-noviembre-2010"
+            },
+            {
+                "id":"2",
+                "nombre":"Secundaria",
+                "institucion": "Jaime de Zudáñez",
+                "descripcion": "Dolor id ullamco proident elit elit cupidatat cupidatat fugiat. Nostrud et laboris aliqua sint est aute aute minim. Quis nisi voluptate sit culpa ullamco proident tempor et.",
+                "fechaInicio":"1-febrero-2005",
+                "fechaFin": "30-noviembre-2010"
+            },
+            {
+                "id":"3",
+                "nombre":"Licenciatura en ingeniería de sistemas",
+                "institucion": "San Francisco Xavier de Chuquisaca",
+                "descripcion": "Dolor id ullamco proident elit elit cupidatat cupidatat fugiat. Nostrud et laboris aliqua sint est aute aute minim. Quis nisi voluptate sit culpa ullamco proident tempor et.",
+                "fechaInicio":"1-febrero-2005",
+                "fechaFin": "30-noviembre-2010"
+            } 
+        ],
+        "experiencia":[
+            {
+                "id":"1",
+                "nombre":"Técnico Medio",
+                "institucion": "Fiscalía General del Estado",
+                "descripcion": "Dolor id ullamco proident elit elit cupidatat cupidatat fugiat. Nostrud et laboris aliqua sint est aute aute minim. Quis nisi voluptate sit culpa ullamco proident tempor et.",
+                "fechaInicio":"1-febrero-2005",
+                "fechaFin": "30-noviembre-2010"
+            },
+            {
+                "id":"2",
+                "nombre":"Programador UX",
+                "institucion": "NASA",
+                "descripcion": "Dolor id ullamco proident elit elit cupidatat cupidatat fugiat. Nostrud et laboris aliqua sint est aute aute minim. Quis nisi voluptate sit culpa ullamco proident tempor et.",
+                "fechaInicio":"1-febrero-2005",
+                "fechaFin": "30-noviembre-2010"
+            }
+            
+        ],
+        "habilidades":[
+            {
+                "nombre":"HTML",
+                "porcentaje":"70",
+                "años":5
+            },
+            {
+                "nombre":"CSS",
+                "porcentaje":"60",
+                "años":3
+            },
+            {
+                "nombre":"Excel",
+                "porcentaje":90,
+                "años":10
+            },
+            {
+                "nombre":"VueJS",
+                "porcentaje":50,
+                "años":2
+            }
+        ]
         
     }, 
     {
@@ -30,9 +103,14 @@
         "profesion": "INGENIERO DE SISTEMAS",
         "descripcion": "Nostrud quis occaecat consectetur adipisicing fugiat laboris id. Cupidatat elit voluptate sint ea consequat est elit est quis incididunt. Deserunt aute officia laboris nisi deserunt. Mollit voluptate non anim tempor dolore in eu nostrud id. Laboris deserunt id aliqua adipisicing duis duis occaecat veniam eiusmod incididunt.",
         "fotografia": "https://media-exp1.licdn.com/dms/image/C4D03AQG5ZlGoHEFifg/profile-displayphoto-shrink_200_200/0/1620822114364?e=2147483647&v=beta&t=3TqwP4pd_Eh3IiNuh9adW9aqnSDHVSFiMaq-24C6p48",
-        "facebook": "https://www.facebook.com/juanvsc",
-        "instagram": "https://wwww.instagram.com",
-        "linkedin": "https://www.linkedin.com"
+        
+        "redes":[
+            {
+                "facebook": "https://www.facebook.com/juanvsc",
+                "instagram": "https://wwww.instagram.com",
+                "linkedin": "https://www.linkedin.com"
+            } 
+        ]
     },
     {
         "idDb": 3,
@@ -45,7 +123,8 @@
         "esProfesor": 0,
         "esInformatico": 1,
         "profesion": "INGENIERO DE SISTEMAS",
-        "descripcion": "Dolor id ullamco proident elit elit cupidatat cupidatat fugiat. Nostrud et laboris aliqua sint est aute aute minim. Quis nisi voluptate sit culpa ullamco proident tempor et. Nulla anim proident anim esse adipisicing cupidatat eu. Eiusmod cillum aliquip exercitation ad in laborum proident qui mollit enim eu veniam aliqua. Consectetur voluptate nostrud irure est."
+        "descripcion": "Dolor id ullamco proident elit elit cupidatat cupidatat fugiat. Nostrud et laboris aliqua sint est aute aute minim. Quis nisi voluptate sit culpa ullamco proident tempor et. Nulla anim proident anim esse adipisicing cupidatat eu. Eiusmod cillum aliquip exercitation ad in laborum proident qui mollit enim eu veniam aliqua. Consectetur voluptate nostrud irure est.",
+        "fotografia":"https://scontent.flpb1-1.fna.fbcdn.net/v/t31.18172-8/22289682_1636620763063095_412933961473431725_o.jpg?_nc_cat=105&ccb=1-7&_nc_sid=174925&_nc_ohc=KXzCCVaIyWgAX-KF8xG&_nc_ht=scontent.flpb1-1.fna&oh=00_AT-ubDBIZ7_jfK9_rkXsfE8Hy1zYrTpiHBfvNDI6LvE0Hg&oe=62F1847E"
     }, 
     {
         "idDb": 4,

@@ -12,17 +12,7 @@
         <hr class="linea">
       </div>
 
-      <div class="redes">
-        <a v-if="persona.facebook" 
-          :href="persona.facebook" target="_blank">
-            <font-awesome-icon class="icon" icon="fa-brands fa-facebook" size="2x" inverse :style="{color: currentMode.color3}"/></a>
-        <a v-if="persona.instagram" 
-          :href="persona.instagram" target="_blank">
-          <font-awesome-icon class="icon" icon="fa-brands fa-instagram-square" size="2x" inverse :style="{color: currentMode.color3}"/></a>
-        <a v-if="persona.linkedin" 
-          :href="persona.linkedin" target="_blank">
-          <font-awesome-icon class="icon" icon="fa-brands fa-linkedin" size="2x" inverse :style="{color: currentMode.color3}"/></a>
-      </div>
+      <SocialNet/>
 
       <div class="detalle">
         <p>{{persona.descripcion}}</p>
@@ -35,7 +25,7 @@
           Contáctame
         </button>
 
-        <button class="btn btn-lg btn primary"
+        <button class="btn"
              @click="$router.push({name:'pabout', params: {ci: persona.numeroDocumento}})">
           Acerca de mí
         </button>
@@ -47,16 +37,21 @@
 </template>
 
 <script>
+import { defineAsyncComponent } from 'vue';
 import { ref } from 'vue'
-import dataFuncionarios from '@/modules/portfolio/helpers/dataFuncionarios.json'
 import useThemes from '../composables/useThemes';
 
 import getPerson from '../composables/getPerson';
 
 export default {
+  components: { 
+      SocialNet: defineAsyncComponent(()=>import('../components/SocialNet.vue')),
+  },
+
   setup(){
     const {currentMode} = useThemes()
     const {persona} = getPerson()
+    //console.log(persona.value.redes[0].facebook)
 
     return{
    
@@ -120,7 +115,7 @@ export default {
           border-color: white;
           color: white;
           width: 200px;
-          height: 10px;
+          height: 3px;
           border-radius: 2px;
           z-index: 5;
           
@@ -145,23 +140,55 @@ export default {
     }
 }
 
-.redes{
-  display: flex;
-  justify-content: center;
-  align-content: center;
+@media (max-width: 575.98px) { 
+ .contenido{
+    flex-direction: column;
+    height: auto;
 
-  a{
-    margin: 0 15px 0 15px;
-
-    .icon:hover {
-      color: #ff651c;
-      font-size: 35px;
-      background-color: #ff651c;
-      //border-radius: 50px;
-
+    .imagen{
+      width: 70%;
     }
-  }
+
   
+ }
+
+ .description{
+    .titulo{
+      font-size: 20px;
+      h1{
+        font-size:larger;
+      } 
+    }
+
+    .buttons{
+
+      button{
+        font-size: small;
+        margin: 5px;
+        padding: 5px;
+      }
+    }
+ }
+}
+
+// `md` applies to small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {
+  
+ }
+
+// `lg` applies to medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+  
+ 
+ }
+
+// `xl` applies to large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {
+  
+}
+
+// `xxl` applies to x-large devices (large desktops, less than 1400px)
+@media (max-width: 1399.98px) { 
   
 }
 

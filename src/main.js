@@ -19,9 +19,13 @@ import { faInstagramSquare } from '@fortawesome/free-brands-svg-icons'
 import { faSun } from '@fortawesome/free-solid-svg-icons'
 import { faMoon } from '@fortawesome/free-solid-svg-icons'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faDownload } from '@fortawesome/free-solid-svg-icons'
 
-library.add(faUserSecret, faHomeUser, faUser, faBriefcase, faPhone, faFacebook, faInstagramSquare, faSun, faMoon, faLinkedin);
-//
+
+library.add(faUserSecret, faHomeUser, faUser, faBriefcase, faPhone, faFacebook, faInstagramSquare, 
+            faSun, faMoon, faLinkedin, faTwitter, faGithub, faDownload);
 
 
 const app = createApp(App)

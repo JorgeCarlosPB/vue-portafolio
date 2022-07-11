@@ -1,6 +1,7 @@
 <template>
     <div class="navBar">
         <div class="menu">
+            
             <router-link :to="{name: 'phome'}"><span>Inicio</span> <br>
                 <font-awesome-icon icon="fa-solid fa-house-user" size="2x" :style="{color: currentMode.color3}"/>
             </router-link>
@@ -9,7 +10,7 @@
                 <font-awesome-icon icon="fa-solid fa-user" size="2x" :style="{color: currentMode.color3}"/>
             </router-link> 
 
-            <router-link :to="{name: 'pprojects'}"><span>Portafolio</span> <br>
+            <router-link :to="{name: 'pprojects'}"><span class="folio">Portafolio</span> <br>
                 <font-awesome-icon icon="fa-solid fa-briefcase" size="2x" :style="{color: currentMode.color3}"/>
             </router-link>
 
@@ -17,27 +18,6 @@
                 <font-awesome-icon icon="fa-solid fa-phone" size="2x" :style="{color: currentMode.color3}"/>
             </router-link>
         </div>
-        <!-- <ul>
-            <li :style="{backgroundColor: currentMode.color2}">
-              <router-link :to="{name: 'phome'}"><span>Inicio</span> <br>
-                <font-awesome-icon icon="fa-solid fa-house-user" size="2x" :style="{color: currentMode.color3}"/></router-link>   
-            </li>
-
-            <li>
-              <router-link :to="{name: 'pabout'}"><span>Acerca</span> <br>
-                <font-awesome-icon icon="fa-solid fa-user" size="2x" :style="{color: currentMode.color3}"/></router-link>
-            </li>
-
-            <li>
-              <router-link :to="{name: 'pprojects'}"><span>Portafolio</span> <br>
-                <font-awesome-icon icon="fa-solid fa-briefcase" size="2x" :style="{color: currentMode.color3}"/></router-link>
-            </li>
-
-            <li>
-              <router-link :to="{name: 'pcontact'}"><span>Contacto</span> <br>
-                <font-awesome-icon icon="fa-solid fa-phone" size="2x" :style="{color: currentMode.color3}"/></router-link>
-            </li>
-        </ul> -->
     </div>
   
 </template>
@@ -51,8 +31,6 @@ export default {
     setup(){
         const {currentMode} = useThemes()
 
-        console.log(currentMode.value)
-        // console.log(styles.value)
 
         return{
             currentMode,
@@ -61,16 +39,16 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 .navBar{
     
     order: 2;
-    width:100px;
-    min-width:100px;
+    z-index: 2;
     
     display: flex;
-    justify-content: center;
+    //justify-content: center;
     align-items: center;
+    border-radius: 10px 0 0 10px;
     
 
     .menu {
@@ -81,27 +59,30 @@ export default {
         list-style-type: none;
         list-style: none;
         
-        overflow: hidden;
+        // overflow: hidden;
 
         a{
-            display: block;
-            color: white;
+            //display: block;
             text-align: center;
             text-decoration: none;
             padding: 25px 0px 25px 0px;
             span{
                 visibility: hidden;
-                font-size: 20px;
+                font-size: 19px;
             }
         }
 
         a:hover span{
             visibility: visible;
+            
         }
 
         }
         a:hover{
             color: #ff651c;
+            .folio{
+                    font-size: 18px;
+            }
         }
 
         a.router-link-active {
@@ -111,6 +92,10 @@ export default {
                 span{
                     visibility: visible;
                 }
+
+                .folio{
+                    font-size: 18px;
+                }
         }
 
 
@@ -118,17 +103,25 @@ export default {
 
 @media (max-width: 800px) {
 
-    .navBar ul{
-        flex-direction: row;
-        align-self: center;
-        border-radius: 20px 20px 20px 20px;
-    }
-
     .navBar {
         align-self: center;
         
-        /* max-width: 15%;
-        min-width: 10%; */
+        width: 100%;
+        border-radius: 15px 15px 0 0;
+        justify-content: center;
     }
+
+    .navBar .menu{
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        a{
+            padding: 2px;
+        }
+        
+    }
+
+    
 }
 </style>
