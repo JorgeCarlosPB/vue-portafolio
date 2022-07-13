@@ -6,6 +6,12 @@
         "primerApellido": "Pérez",
         "segundoApellido": "Barja",
         "celular": "78666661",
+        "correo": "jorge.carlos.perez.barja@gmail.com",
+        "fechaNacimiento":"30-03-2000",
+        "lugarNacimiento":"Santa Cruz de la sierra",
+        "nacionalidad": "Boliviana",
+        "domicilio":"Av. 2016 esq. Barbados Z. Libertadores",
+        "sexo":"M",
         "esAbogado": 0,
         "esProfesor": 0,
         "esInformatico": 1,
@@ -86,6 +92,36 @@
                 "nombre":"VueJS",
                 "porcentaje":50,
                 "años":2
+            }
+        ],
+        "cursos":[
+            {
+                "institucion":"Fiscalía General del Estado",
+                "nombre":"Capacitación en la ley 1179",
+                "duracion":"120 horas",
+                "fecha":"15-diciembre-2020",
+                "ubicación":"Madrid"
+            },
+            {
+                "institucion":"Fiscalía General del Estado",
+                "nombre":"Taller de manejo del sistema de RR.HH.",
+                "duracion":"3 horas",
+                "fecha":"15-diciembre-2020",
+                "ubicación":"Sucre"
+            },
+            {
+                "institucion":"Fiscalía General del Estado",
+                "nombre":"Curso de manejo de excel",
+                "duracion":"1 mes",
+                "fecha":"15-diciembre-2020",
+                "ubicación":"La Paz"
+            },
+            {
+                "institucion":"Fiscalía General del Estado",
+                "nombre":"Taller de servicio al cliente",
+                "duracion":"3 horas",
+                "fecha":"15-diciembre-2020",
+                "ubicación":"Sucre"
             }
         ]
         

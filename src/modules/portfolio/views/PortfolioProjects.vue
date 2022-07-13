@@ -1,5 +1,8 @@
 <template>
   <MySkills/>
+
+  <MyCourses/>
+
 </template>
 
 <script>
@@ -11,6 +14,7 @@ export default {
       SocialNet: defineAsyncComponent(()=>import('../components/SocialNet.vue')),
       MyResume: defineAsyncComponent(()=>import('../components/MyResume.vue')),
       MySkills: defineAsyncComponent(()=>import('../components/MySkills.vue')),
+      MyCourses: defineAsyncComponent(()=>import('../components/MyCourses.vue')),
   },
 
   setup(){
@@ -18,7 +22,7 @@ export default {
     const {persona}=getPerson()
    
 
-    console.log(typeof(persona.value.habilidades[0].porcentaje))
+    //console.log(typeof(persona.value.habilidades[0].porcentaje))
 
     return{
       currentMode,

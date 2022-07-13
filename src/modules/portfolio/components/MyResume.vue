@@ -83,4 +83,21 @@ export default {
     margin-bottom: 30px;
 }
 
+@media (max-width: 650px) {
+
+    .formacion{
+
+        .education{
+            flex-direction: column;
+
+            .educationItem{
+                width: 100%;
+            }
+        }
+    }
+
+
+}
+
+
 </style>

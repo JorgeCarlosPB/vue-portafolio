@@ -1,5 +1,5 @@
 <template>
-  <div class="redes"
+  <div v-if="persona.redes" class="redes"
   >
         <a v-if="persona.redes[0].facebook" 
           :href="persona.redes[0].facebook" target="_blank">
@@ -62,5 +62,52 @@ export default {
   }
     
 }
+
+@media (min-width: 1700px) {
+  .redes{
+    a{
+      margin: 0 25px 0 25px;
+      .icon{
+        font-size: 60px;
+      }
+
+      .icon:hover {
+        font-size: 55px;
+
+      }
+    }
+
+  }
+}
+
+@media (max-width: 800px) {
+  .redes{
+    a{
+      margin: 0 10px 0 10px;
+      .icon{
+        font-size: 27px;
+      }
+      .icon:hover {
+        font-size: 28px;
+      }
+    }
+  }
+  
+ }
+
+
+@media (max-width: 991.98px) {
+  
+ 
+ }
+
+
+@media (max-width: 1199.98px) {
+  
+}
+
+@media (max-width: 1399.98px) { 
+  
+ }
 
 </style>

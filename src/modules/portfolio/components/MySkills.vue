@@ -8,14 +8,14 @@
         <div class="herramienta"
             v-for="herramienta in persona.habilidades">
             <div class="detalle">
-                <label > {{herramienta.nombre}}</label>   <span class="años">Experiencia: {{herramienta.años}} años</span>
+                <label :style="{color:currentMode.color3}"> {{herramienta.nombre}}</label>   <span class="años">Experiencia: {{herramienta.años}} años</span>
             </div>
 
             <div class="porcentaje">
                 <meter
                     min="0" max="100" low="1" high="99" optimum="50"
-                    :value=herramienta.porcentaje>Hola
-                </meter> <span>{{herramienta.porcentaje}}%</span>
+                    :value=herramienta.porcentaje>
+                </meter> <span :style="{color:currentMode.color3}">{{herramienta.porcentaje}}%</span>
 
             </div>
             
@@ -74,9 +74,7 @@ h1{
 }
 .herramienta{
     padding-bottom: 20px;
-    
-
-    
+      
 
     .detalle{
         display: flex;
@@ -97,10 +95,6 @@ h1{
         width: 92%;
         
     }
-
-    // meter::-webkit-meter-bar{
-    //     background: black;
-    // }
     ::-webkit-meter-bar{
         background: white;   
     }
@@ -108,8 +102,11 @@ h1{
     ::-webkit-meter-optimum-value{
         background: #ff651c;
     }
-
 }
 
+
+@media (max-width: 700px) {
+  
+} 
 
 </style>

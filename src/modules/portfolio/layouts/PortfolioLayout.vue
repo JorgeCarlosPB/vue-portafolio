@@ -131,6 +131,7 @@ export default {
     .content{
         flex-direction: column;
         width: 93%;
+        //height: 85%;
     }
 }
 

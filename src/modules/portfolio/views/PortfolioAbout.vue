@@ -2,9 +2,8 @@
   <div class="contenido">
     <div class="titulo">
       <h1 :style="{color:currentMode.color3}">Acerca de <span >mí</span></h1> 
+      <hr>
     </div>
-
-
     
     <div class="description">
       <div class="imagen">
@@ -20,27 +19,10 @@
           <p>{{persona.descripcion}}</p>
         </div>
 
-        <h2 :style="{color:currentMode.color3}">Información personal</h2>
-        <div class="info">
-          
-          <div class="info1">
-            <span class="clave">Nombre :</span>            <span class="valor" :style="{color:currentMode.color3}">{{persona.nombre}}</span>          <br>
-            <span class="clave">Apellido Paterno :</span>  <span class="valor" :style="{color:currentMode.color3}">{{persona.primerApellido}}</span>  <br>
-            <span class="clave">Apellido Materno :</span>  <span class="valor" :style="{color:currentMode.color3}">{{persona.segundoApellido}}</span> <br>
-            <span class="clave">Dirección :</span>         <span class="valor" :style="{color:currentMode.color3}">{{persona.primerApellido}}</span>  <br>
-            <span class="clave">Lugar nacimiento :</span>  <span class="valor" :style="{color:currentMode.color3}">{{persona.primerApellido}}</span>  <br>
-          </div>
-
-          <div class="info1">
-            <span class="clave">Nombre :</span>            <span class="valor" :style="{color:currentMode.color3}">{{persona.nombre}}</span>          <br>
-            <span class="clave">Apellido Paterno :</span>  <span class="valor" :style="{color:currentMode.color3}">{{persona.primerApellido}}</span>  <br>
-            <span class="clave">Apellido Materno :</span>  <span class="valor" :style="{color:currentMode.color3}">{{persona.segundoApellido}}</span> <br>
-            <span class="clave">Dirección :</span>         <span class="valor" :style="{color:currentMode.color3}">{{persona.primerApellido}}</span>  <br>
-            <span class="clave">Lugar nacimiento :</span>  <span class="valor" :style="{color:currentMode.color3}">{{persona.primerApellido}}</span>  <br>
-          </div>
-        </div>
+        <PersonalInformation class="pinfo"/>
 
         <button class="descarga">Descargar CV  <font-awesome-icon icon="fa-solid fa-download" /></button>
+        
         <SocialNet/>
 
       </div>
@@ -49,10 +31,6 @@
     <MyResume/>
 
     <MySkills/>
-
-
-
-    
 
   </div>
 </template>
@@ -67,6 +45,7 @@ export default {
       SocialNet: defineAsyncComponent(()=>import('../components/SocialNet.vue')),
       MyResume: defineAsyncComponent(()=>import('../components/MyResume.vue')),
       MySkills: defineAsyncComponent(()=>import('../components/MySkills.vue')),
+      PersonalInformation: defineAsyncComponent(()=>import('../components/PersonalInformation.vue'))
   },
   
   setup(){
@@ -88,69 +67,86 @@ export default {
 .contenido{
   display: flex;
   flex-direction: column;
-  
-}
-
-.titulo{
-  display: flex;
-  justify-content: center;
-  h1{
-    font-size: 60px; 
-  }
-  hr{
-    color: black;
-  }
-}
-
-.description{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-
-  .imagen{
-  width: 27%;
-    .foto{
-      width: 100%;
-
+  .titulo{
+    display: flex;
+    justify-content: center;
+    h1{
+      font-size: 60px; 
+    }
+    hr{
+      color: black;
     }
   }
-  .contenedor{
-    width: 70%;
-
-    .detalle{
-      p{
-        color: #888888;
-      }
-    }
-  }
-
-  .info{
-    width: 100%;
+  .description{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
- 
-    .clave{
-      color: #888888;
 
+    .imagen{
+      width: 27%;
+      .foto{
+        width: 100%;
+      }
     }
-    .info1{
-      width: 40%;
+    .contenedor{
+      width: 70%;
+      .detalle{
+        p{
+          color: #888888;
+        }
+      }
+
+      .pinfo{
+        width: 100%;
+      }
+
+      .descarga{
+        padding: 5px;
+        border-radius: 5px;
+        background-color: #ff651c;
+        color: white;
+      }
+
+      .descarga:hover{
+        border: solid 2px #ff651c;
+        background-color: white;
+        color: black;
+      }
     }
+
+    
   }
 }
 
-.descarga{
-  padding: 5px;
-  border-radius: 5px;
-  background-color: #ff651c;
-  color: white;
-}
 
-.descarga:hover{
-  border: solid 2px #ff651c;
-  background-color: white;
-  color: black;
-}
+@media (max-width: 700px) {
+  .contenido{
+
+    .titulo{
+      h1{
+        font-size: 40px;
+      }
+    
+    }
+
+    .description{
+      flex-direction: column;
+      .imagen{
+        width: 60%;   
+        align-self: center;
+        .foto{
+          justify-self: center;
+        }
+      }
+
+      .contenedor{
+        width: 100%;
+        margin: 20px 0 20px 0;
+
+        
+      }
+    }
+  }
+} 
 
 </style>

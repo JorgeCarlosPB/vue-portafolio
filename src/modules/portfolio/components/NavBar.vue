@@ -3,19 +3,19 @@
         <div class="menu">
             
             <router-link :to="{name: 'phome'}"><span>Inicio</span> <br>
-                <font-awesome-icon icon="fa-solid fa-house-user" size="2x" :style="{color: currentMode.color3}"/>
+                <font-awesome-icon icon="fa-solid fa-house-user" size="2x" :style="{color: currentMode.color3}" class="icono"/>
             </router-link>
 
             <router-link :to="{name: 'pabout'}"><span>Acerca</span> <br>
-                <font-awesome-icon icon="fa-solid fa-user" size="2x" :style="{color: currentMode.color3}"/>
+                <font-awesome-icon icon="fa-solid fa-user" size="2x" :style="{color: currentMode.color3}" class="icono"/>
             </router-link> 
 
             <router-link :to="{name: 'pprojects'}"><span class="folio">Portafolio</span> <br>
-                <font-awesome-icon icon="fa-solid fa-briefcase" size="2x" :style="{color: currentMode.color3}"/>
+                <font-awesome-icon icon="fa-solid fa-briefcase" size="2x" :style="{color: currentMode.color3}" class="icono"/>
             </router-link>
 
             <router-link :to="{name: 'pcontact'}"><span>Contacto</span> <br>
-                <font-awesome-icon icon="fa-solid fa-phone" size="2x" :style="{color: currentMode.color3}"/>
+                <font-awesome-icon icon="fa-solid fa-phone" size="2x" :style="{color: currentMode.color3}" class="icono"/>
             </router-link>
         </div>
     </div>
@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import styles from "@/modules/portfolio/layouts/PortfolioLayout.vue"
+
 import useThemes from '../composables/useThemes';
 
 
@@ -58,35 +58,32 @@ export default {
         border-radius: 20px 0 0 20px;
         list-style-type: none;
         list-style: none;
-        
-        // overflow: hidden;
 
         a{
-            //display: block;
             text-align: center;
             text-decoration: none;
             padding: 25px 0px 25px 0px;
+            font-size: 20px;
             span{
                 visibility: hidden;
-                font-size: 19px;
+                font-size: 22px;
             }
         }
 
-        a:hover span{
-            visibility: visible;
-            
-        }
-
-        }
-        a:hover{
+        a:hover {
             color: #ff651c;
-            .folio{
-                    font-size: 18px;
-            }
-        }
 
+            span{
+                visibility: visible;
+            }
+
+            .folio{
+                    font-size: 20px;
+            }
+
+        }
+        
         a.router-link-active {
-  
             color: #ff651c;
 
                 span{
@@ -94,10 +91,10 @@ export default {
                 }
 
                 .folio{
-                    font-size: 18px;
+                    font-size: 20px;
                 }
         }
-
+    }
 
 }
 
@@ -105,23 +102,89 @@ export default {
 
     .navBar {
         align-self: center;
-        
         width: 100%;
         border-radius: 15px 15px 0 0;
         justify-content: center;
-    }
-
-    .navBar .menu{
+        .menu{
         width: 100%;
         flex-direction: row;
         justify-content: space-evenly;
+            a{
+                padding: 1px;
+                font-size: 13px;
+                span{
+                    font-size: 14px;
+                }
 
-        a{
-            padding: 2px;
+                .router-link-active {
+                    span{
+                        visibility: visible;
+                        font-size: 14;
+                    }
+
+                    .folio{
+                        font-size: 14px;
+                    }
+                }
+            }
+            
+            a:hover {
+                span{
+                    font-size: 14px;
+                }
+
+                .folio{
+                    font-size: 14px;
+                }
+
+            }
         }
-        
     }
-
-    
 }
+
+@media (min-width: 1700px) {
+
+    .navBar{
+
+        .menu{
+            padding: 15px;
+            a{  
+                .icono{
+                font-size: 70px;
+            }
+
+            span{
+                font-size: 30px;
+            }
+            .folio{
+                font-size: 30px;
+            }
+            }
+            a.router-link-active {          
+                span{
+                    font-size: 30px;
+                }
+                .folio{
+                    font-size: 30px;
+                }
+            }
+
+            a:hover {
+                span{
+                    font-size: 30px;
+                }
+                .folio{
+                    font-size: 30px;
+                }
+            }
+        }
+
+    }
+  
+}
+
+@media (max-width: 1199.98px) {
+  
+}
+
 </style>

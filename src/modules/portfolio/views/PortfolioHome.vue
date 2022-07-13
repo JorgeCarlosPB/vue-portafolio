@@ -146,7 +146,11 @@ export default {
     height: auto;
 
     .imagen{
-      width: 70%;
+      width: 75%;
+    }
+
+    .description{
+      width: 85%;
     }
 
   
@@ -154,7 +158,7 @@ export default {
 
  .description{
     .titulo{
-      font-size: 20px;
+      font-size: 25px;
       h1{
         font-size:larger;
       } 
@@ -171,24 +175,60 @@ export default {
  }
 }
 
-// `md` applies to small devices (landscape phones, less than 768px)
 @media (max-width: 767.98px) {
   
  }
 
-// `lg` applies to medium devices (tablets, less than 992px)
 @media (max-width: 991.98px) {
   
- 
  }
 
-// `xl` applies to large devices (desktops, less than 1200px)
 @media (max-width: 1199.98px) {
   
 }
 
-// `xxl` applies to x-large devices (large desktops, less than 1400px)
 @media (max-width: 1399.98px) { 
+  
+}
+
+@media (min-width: 1400px) {
+  .detalle{
+    p{
+      font-size: 30px;
+    }
+  }
+}
+
+
+@media (min-width: 1700px) {
+  .contenido{
+
+    .detalle{
+
+      p{
+        font-size: 45px;
+      }
+    }
+
+    .description{
+      .titulo{
+          h1{
+            font-size: 95px;
+          }
+        }
+
+      .buttons{
+        
+
+        button{
+          font-size:45px;
+          margin: 15px;
+          padding: 15px;
+        }
+      }
+    }
+
+  }
   
 }
 
