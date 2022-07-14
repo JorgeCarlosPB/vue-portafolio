@@ -1,25 +1,15 @@
 <template>
   <div class="formacion"
     v-if="persona.educacion">
-    <h1 :style="{color:currentMode.color3}">Mi <span :style="{color:'#ff651c'}">formación</span></h1>
+    <h1 :style="{color:currentMode.color3}">Mi <span :style="{color:getColor}">formación</span></h1>
     
-        <h2 :style="{color:currentMode.color3}">Educación</h2> <br>
+        <h2 :style="{color:currentMode.color3}">Formación Académica</h2> <br>
         <div class="education">
-            <div class="educationItem" v-for="educacion in persona.educacion" :style="{backgroundColor:currentMode.color2}">
-                <h4 :style="{color:'#ff651c'}">{{educacion.nombre}}</h4>
+            <div class="educationItem" v-for="educacion in persona.educacion" :style="{backgroundColor:currentMode.color2, borderLeft:'2px solid'+getColor}">
+                <h4 :style="{color:getColor}">{{educacion.nombre}}</h4>
                 <h5 :style="{color:currentMode.color3}">{{educacion.institucion}}</h5>
                 <h6 :style="{color:currentMode.color3}">{{educacion.fechaInicio}} hasta {{educacion.fechaFin}}</h6>
                 <p>{{educacion.descripcion}}</p>
-            </div>
-        </div>
-
-        <h2 :style="{color:currentMode.color3}">Experiencia</h2> <br>
-        <div class="education">
-            <div class="educationItem" v-for="experiencia in persona.experiencia" :style="{backgroundColor:currentMode.color2}">
-                <h4 :style="{color:'#ff651c'}">{{experiencia.nombre}}</h4>
-                <h5 :style="{color:currentMode.color3}">{{experiencia.institucion}}</h5>
-                <h6 :style="{color:currentMode.color3}">{{experiencia.fechaInicio}} hasta {{experiencia.fechaFin}}</h6>
-                <p>{{experiencia.descripcion}}</p>
             </div>
         </div>
     
@@ -32,13 +22,12 @@ import useThemes from '../composables/useThemes';
 
 export default {
     setup(){
-      const {currentMode} = useThemes()
+      const {currentMode, getColor} = useThemes()
       const {persona}=getPerson()
-    //   console.log((persona.value.educacion).length)
-    //   console.log(persona.value.educacion[0].nombre)
 
     return{
       currentMode,
+      getColor,
       persona
       
     }

@@ -30,12 +30,13 @@ import useThemes from '../composables/useThemes';
 
 export default {
     setup(){
-        const {currentMode} = useThemes()
+        const {currentMode, getColor} = useThemes()
         const {persona} = getPerson()
 
         return{
             persona,
-            currentMode
+            currentMode,
+            getColor
         }
     }
 
@@ -55,7 +56,6 @@ export default {
     .icon:hover {
       color: #ff651c;
       font-size: 35px;
-      background-color: #ff651c;
       //border-radius: 50px;
 
     }

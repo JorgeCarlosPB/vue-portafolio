@@ -2,19 +2,19 @@
     <div class="navBar">
         <div class="menu">
             
-            <router-link :to="{name: 'phome'}"><span>Inicio</span> <br>
+            <router-link :to="{name: 'phome'}"><span :style="{color:getColor}">Inicio</span> <br>
                 <font-awesome-icon icon="fa-solid fa-house-user" size="2x" :style="{color: currentMode.color3}" class="icono"/>
             </router-link>
 
-            <router-link :to="{name: 'pabout'}"><span>Acerca</span> <br>
+            <router-link :to="{name: 'pabout'}"><span :style="{color:getColor}">Acerca</span> <br>
                 <font-awesome-icon icon="fa-solid fa-user" size="2x" :style="{color: currentMode.color3}" class="icono"/>
             </router-link> 
 
-            <router-link :to="{name: 'pprojects'}"><span class="folio">Portafolio</span> <br>
+            <router-link :to="{name: 'pprojects'}"><span class="folio" :style="{color:getColor}">Portafolio</span> <br>
                 <font-awesome-icon icon="fa-solid fa-briefcase" size="2x" :style="{color: currentMode.color3}" class="icono"/>
             </router-link>
 
-            <router-link :to="{name: 'pcontact'}"><span>Contacto</span> <br>
+            <router-link :to="{name: 'pcontact'}"><span :style="{color:getColor}">Contacto</span> <br>
                 <font-awesome-icon icon="fa-solid fa-phone" size="2x" :style="{color: currentMode.color3}" class="icono"/>
             </router-link>
         </div>
@@ -29,11 +29,12 @@ import useThemes from '../composables/useThemes';
 
 export default {
     setup(){
-        const {currentMode} = useThemes()
+        const {currentMode, getColor} = useThemes()
 
 
         return{
             currentMode,
+            getColor
         }
     }
 }

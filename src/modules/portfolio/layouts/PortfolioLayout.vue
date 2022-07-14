@@ -1,32 +1,15 @@
 <template>
 
-    <div class="temas">
-    <button 
-      v-if="currentMode.mode == 'dark'"
-      @click="change">
-      <font-awesome-icon icon="fa-solid fa-sun" size="2x" />
-      aclarar
-    </button> 
-
-    <button 
-      v-else
-      @click="change">
-      <font-awesome-icon icon="fa-solid fa-moon" size="2x" />
-      oscurecer
-    </button>
-
-  </div>
+  <MyThemes/>    
 
   <div class="cuerpo" :style="{backgroundColor: currentMode.color1}">
-
-    <div class="homecolor-box"></div>
+    <div class="homecolor-box" :style="{backgroundColor:getColor}"></div>
 
     <!--Barra de navegación-->
     <NavBar :style="{backgroundColor: currentMode.color2}"/>
 
     <!--Contenido de cada menú-->
     <div class="content" :style="{backgroundColor: currentMode.color2}">       
-         
         <router-view v-slot="{Component, route}">
           <keep-alive>
             <component :is="Component" :key="route.name"/>
@@ -47,11 +30,12 @@ import { useRouter, useRoute } from 'vue-router'
 export default {
     components: { 
       NavBar: defineAsyncComponent(()=>import('../components/NavBar.vue')),
+      MyThemes: defineAsyncComponent(()=>import('../components/MyThemes.vue')),
     },
 
     setup(){
       const router = useRouter()     
-      const {all,currentMode, light,dark , changeTheme} = useThemes()
+      const {all,currentMode,getColor, light,dark , changeTheme} = useThemes()
       const rojo = ref('red')
       //rootElement.style.setProperty(“--rojo”, color);
 
@@ -61,6 +45,7 @@ export default {
         
        
         currentMode,
+        getColor,
         all,       
         change:()=>{
           changeTheme()
@@ -74,12 +59,6 @@ export default {
 </script>
 
 <style lang="scss">
-
-.temas{
-  position: fixed;
-  margin-top: 7%;
-  z-index: 3;
-}
 
 .cuerpo{
     width: 100%;

@@ -22,10 +22,15 @@ import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faDownload } from '@fortawesome/free-solid-svg-icons'
+import { faPalette } from '@fortawesome/free-solid-svg-icons'
+import { faDroplet } from '@fortawesome/free-solid-svg-icons'
+import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
 
 library.add(faUserSecret, faHomeUser, faUser, faBriefcase, faPhone, faFacebook, faInstagramSquare, 
-            faSun, faMoon, faLinkedin, faTwitter, faGithub, faDownload);
+            faSun, faMoon, faLinkedin, faTwitter, faGithub, faDownload, faPalette, faDroplet, 
+            faLocationDot, faEnvelope);
 
 
 const app = createApp(App)

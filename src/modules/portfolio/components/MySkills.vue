@@ -8,11 +8,11 @@
         <div class="herramienta"
             v-for="herramienta in persona.habilidades">
             <div class="detalle">
-                <label :style="{color:currentMode.color3}"> {{herramienta.nombre}}</label>   <span class="años">Experiencia: {{herramienta.años}} años</span>
+                <label :style="{color:currentMode.color3}"> {{herramienta.nombre}}</label>   <span class="años" :style="{color:getColor}">Experiencia: {{herramienta.años}} años</span>
             </div>
 
             <div class="porcentaje">
-                <meter
+                <meter style="{color:getColor}"
                     min="0" max="100" low="1" high="99" optimum="50"
                     :value=herramienta.porcentaje>
                 </meter> <span :style="{color:currentMode.color3}">{{herramienta.porcentaje}}%</span>
@@ -34,7 +34,7 @@ import useThemes from '../composables/useThemes';
 
 export default {
       setup(){
-      const {currentMode} = useThemes()
+      const {currentMode, getColor} = useThemes()
       const {persona}=getPerson()
     //   console.log((persona.value.educacion).length)
     //   console.log(persona.value.educacion[0].nombre)
@@ -43,6 +43,7 @@ export default {
 
     return{
       currentMode,
+      getColor,
       persona
       
     }
@@ -100,7 +101,7 @@ h1{
     }
 
     ::-webkit-meter-optimum-value{
-        background: #ff651c;
+        background: #888888;
     }
 }
 

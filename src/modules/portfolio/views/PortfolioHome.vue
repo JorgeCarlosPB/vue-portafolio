@@ -9,7 +9,7 @@
         <h1 :style="{color: currentMode.color3}"> 
           {{persona.nombre}} {{persona.primerApellido}} {{persona.segundoApellido}}
         </h1>
-        <hr class="linea">
+        <hr class="linea" :style="{backgroundColor: getColor}">
       </div>
 
       <SocialNet/>
@@ -21,12 +21,12 @@
     
       <div class="buttons">
         <button class="btn btn-lg btn primary active"
-            @click="$router.push({name:'pcontact'})">
+            @click="$router.push({name:'pcontact'})" :style="{backgroundColor:getColor}">
           Contáctame
         </button>
 
         <button class="btn"
-             @click="$router.push({name:'pabout', params: {ci: persona.numeroDocumento}})">
+             @click="$router.push({name:'pabout', params: {ci: persona.numeroDocumento}}) " :style="{backgroundColor:getColor}">
           Acerca de mí
         </button>
       </div>
@@ -49,7 +49,7 @@ export default {
   },
 
   setup(){
-    const {currentMode} = useThemes()
+    const {currentMode, getColor} = useThemes()
     const {persona} = getPerson()
     //console.log(persona.value.redes[0].facebook)
 
@@ -57,6 +57,7 @@ export default {
    
       persona,
       currentMode,
+      getColor
     }
 
   }
@@ -133,7 +134,6 @@ export default {
     justify-content: center;
 
     button{
-      background-color: #ff651c;
       color: white;
       font-size: medium;
       margin: 5px;

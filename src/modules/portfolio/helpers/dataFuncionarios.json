@@ -53,6 +53,32 @@
                 "fechaFin": "30-noviembre-2010"
             } 
         ],
+        "postGrado":[
+            {
+                "id":"1",
+                "nombre":"Diplomado en educación Superior",
+                "institucion": "Ministerio de Educación",
+                "descripcion": "Dolor id ullamco proident elit elit cupidatat cupidatat fugiat. Nostrud et laboris aliqua sint est aute aute minim. Quis nisi voluptate sit culpa ullamco proident tempor et.",
+                "fechaInicio":"1-febrero-2005",
+                "fechaFin": "30-noviembre-2010"
+            },
+            {
+                "id":"2",
+                "nombre":"Maestria en Ingeniería Legal",
+                "institucion": "U. S. F. X. CH.",
+                "descripcion": "Dolor id ullamco proident elit elit cupidatat cupidatat fugiat. Nostrud et laboris aliqua sint est aute aute minim. Quis nisi voluptate sit culpa ullamco proident tempor et.",
+                "fechaInicio":"1-febrero-2005",
+                "fechaFin": "30-noviembre-2010"
+            },
+            {
+                "id":"3",
+                "nombre":"Doctorado en seguridad informática",
+                "institucion": "Harvard",
+                "descripcion": "Dolor id ullamco proident elit elit cupidatat cupidatat fugiat. Nostrud et laboris aliqua sint est aute aute minim. Quis nisi voluptate sit culpa ullamco proident tempor et.",
+                "fechaInicio":"1-febrero-2005",
+                "fechaFin": "30-noviembre-2010"
+            } 
+        ],
         "experiencia":[
             {
                 "id":"1",
@@ -72,6 +98,38 @@
             }
             
         ],
+        
+        "cursos":[
+            {
+                "institucion":"Fiscalía General del Estado",
+                "nombre":"Capacitación en la ley 1179",
+                "duracion":"120 horas",
+                "fecha":"15-diciembre-2020",
+                "ubicacion":"Madrid"
+            },
+            {
+                "institucion":"Fiscalía General del Estado",
+                "nombre":"Taller de manejo del sistema de RR.HH.",
+                "duracion":"3 horas",
+                "fecha":"15-diciembre-2020",
+                "ubicacion":"Sucre"
+            },
+            {
+                "institucion":"Fiscalía General del Estado",
+                "nombre":"Curso de manejo de excel",
+                "duracion":"1 mes",
+                "fecha":"15-diciembre-2020",
+                "ubicacion":"La Paz"
+            },
+            {
+                "institucion":"Fiscalía General del Estado",
+                "nombre":"Taller de servicio al cliente",
+                "duracion":"3 horas",
+                "fecha":"15-diciembre-2020",
+                "ubicacion":"Sucre"
+            }
+        ],
+
         "habilidades":[
             {
                 "nombre":"HTML",
@@ -92,36 +150,6 @@
                 "nombre":"VueJS",
                 "porcentaje":50,
                 "años":2
-            }
-        ],
-        "cursos":[
-            {
-                "institucion":"Fiscalía General del Estado",
-                "nombre":"Capacitación en la ley 1179",
-                "duracion":"120 horas",
-                "fecha":"15-diciembre-2020",
-                "ubicación":"Madrid"
-            },
-            {
-                "institucion":"Fiscalía General del Estado",
-                "nombre":"Taller de manejo del sistema de RR.HH.",
-                "duracion":"3 horas",
-                "fecha":"15-diciembre-2020",
-                "ubicación":"Sucre"
-            },
-            {
-                "institucion":"Fiscalía General del Estado",
-                "nombre":"Curso de manejo de excel",
-                "duracion":"1 mes",
-                "fecha":"15-diciembre-2020",
-                "ubicación":"La Paz"
-            },
-            {
-                "institucion":"Fiscalía General del Estado",
-                "nombre":"Taller de servicio al cliente",
-                "duracion":"3 horas",
-                "fecha":"15-diciembre-2020",
-                "ubicación":"Sucre"
             }
         ]
         
@@ -181,13 +209,14 @@
         "numeroDocumento":"001100",
         "nombre": "Juan ",
         "primerApellido": "Lanchipa",
-        "segundoApellido": "Chávez",
+        "segundoApellido": "Ponce",
         "celular": "66666666",
         "esAbogado": 1,
         "esProfesor": 0,
         "esInformatico": 0,
         "profesion": "ABOGADO",
-        "descripcion": "Quis mollit est nulla magna in commodo. Deserunt ea ex consequat id ipsum dolore nulla anim non labore. Est laboris pariatur ullamco anim ad tempor enim. Duis esse nostrud aute nisi sit."
+        "descripcion": "Quis mollit est nulla magna in commodo. Deserunt ea ex consequat id ipsum dolore nulla anim non labore. Est laboris pariatur ullamco anim ad tempor enim. Duis esse nostrud aute nisi sit.",
+        "fotografia":"/public/foto.jpg"
     },
     {
         "idDb": 1,

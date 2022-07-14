@@ -1,4 +1,7 @@
+import {ref} from 'vue';
 
+let mode = ref('')
+let color = ref('')
 export const changeTheme = (state, id)=>{
     // const temaIdx = state.colores.findIndex(color => color.id === id)
     //   state.colores[temaIdx].active = !state.colores[temaIdx].active
@@ -11,7 +14,23 @@ export const changeTheme = (state, id)=>{
     // for(let i=0; i< (state.colores).length; i++ ){
         
     // }
-    state.colores[0].active = !state.colores[0].active
-    state.colores[1].active = !state.colores[1].active
-    
+    state.modos[0].active = !state.modos[0].active
+    state.modos[1].active = !state.modos[1].active
   }
+
+export const changeL = (state) =>{
+  let mode = 'ligth'
+  localStorage.setItem("mode", mode)
+}
+
+export const changeD = (state) =>{
+  let mode = 'dark'
+  localStorage.setItem("mode", mode)
+}
+
+
+export const putColor = (state, col) =>{
+  let color  = col
+  localStorage.setItem("color", color)
+  location.reload()
+}

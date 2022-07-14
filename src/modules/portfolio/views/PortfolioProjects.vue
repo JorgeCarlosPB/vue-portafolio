@@ -1,6 +1,8 @@
 <template>
   <MySkills/>
 
+  <MyPostgrades/>
+
   <MyCourses/>
 
 </template>
@@ -12,9 +14,10 @@ import useThemes from '../composables/useThemes';
 export default {
   components: { 
       SocialNet: defineAsyncComponent(()=>import('../components/SocialNet.vue')),
-      MyResume: defineAsyncComponent(()=>import('../components/MyResume.vue')),
+      MyResume: defineAsyncComponent(()=>import('../components/MyFormation.vue')),
       MySkills: defineAsyncComponent(()=>import('../components/MySkills.vue')),
       MyCourses: defineAsyncComponent(()=>import('../components/MyCourses.vue')),
+      MyPostgrades: defineAsyncComponent(()=>import('../components/MyPostgrades.vue'))
   },
 
   setup(){

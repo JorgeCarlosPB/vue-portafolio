@@ -79,7 +79,7 @@ import useThemes from '../composables/useThemes';
 export default {
   components: { 
       SocialNet: defineAsyncComponent(()=>import('../components/SocialNet.vue')),
-      MyResume: defineAsyncComponent(()=>import('../components/MyResume.vue')),
+      MyResume: defineAsyncComponent(()=>import('./MyFormation.vue')),
       MySkills: defineAsyncComponent(()=>import('../components/MySkills.vue')),
   },
   

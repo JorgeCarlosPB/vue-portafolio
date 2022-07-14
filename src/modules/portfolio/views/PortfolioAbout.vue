@@ -1,7 +1,7 @@
 <template>
   <div class="contenido">
     <div class="titulo">
-      <h1 :style="{color:currentMode.color3}">Acerca de <span >mí</span></h1> 
+      <h1 :style="{color:currentMode.color3}">Acerca de <span :style="{color:getColor}">mí</span></h1> 
       <hr>
     </div>
     
@@ -14,21 +14,23 @@
         <div class="detalle">
           <h3 :style="{color:currentMode.color3}">¿Quién soy?</h3>
           <h2 :style="{color:currentMode.color3}">Mi nombre es {{persona.nombre}} {{persona.primerApellido}} {{persona.segudnoApellido}},
-              soy <span :style="{color:'#ff651c'}">{{persona.profesion}}</span>
+              soy <span :style="{color:getColor}">{{persona.profesion}}</span>
           </h2>
           <p>{{persona.descripcion}}</p>
         </div>
 
         <PersonalInformation class="pinfo"/>
 
-        <button class="descarga">Descargar CV  <font-awesome-icon icon="fa-solid fa-download" /></button>
+        <button class="descarga" :style="{backgroundColor:getColor}">Descargar CV  <font-awesome-icon icon="fa-solid fa-download" /></button>
         
         <SocialNet/>
 
       </div>
     </div>
 
-    <MyResume/>
+    <MyFormation/>
+
+    <MyPostgrades/>
 
     <MySkills/>
 
@@ -40,22 +42,24 @@ import { defineAsyncComponent } from 'vue';
 import getPerson from '../composables/getPerson';
 import useThemes from '../composables/useThemes';
 
+
 export default {
   components: { 
       SocialNet: defineAsyncComponent(()=>import('../components/SocialNet.vue')),
-      MyResume: defineAsyncComponent(()=>import('../components/MyResume.vue')),
+      MyFormation: defineAsyncComponent(()=>import('../components/MyFormation.vue')),
       MySkills: defineAsyncComponent(()=>import('../components/MySkills.vue')),
-      PersonalInformation: defineAsyncComponent(()=>import('../components/PersonalInformation.vue'))
+      PersonalInformation: defineAsyncComponent(()=>import('../components/PersonalInformation.vue')),
+      MyPostgrades: defineAsyncComponent(()=>import('../components/MyPostgrades.vue'))
   },
   
   setup(){
-      const {currentMode} = useThemes()
+      const {currentMode, getColor} = useThemes()
       const {persona}=getPerson()
 
     return{
       currentMode,
-      persona
-      
+      getColor,
+      persona  
     }
   }
 
