@@ -17,7 +17,7 @@
         "esInformatico": 1,
         "profesion": "ESTUDIANTE",
         "descripcion": "Labore dolore minim non mollit. Minim labore consequat culpa officia mollit Lorem sunt ex deserunt. Non reprehenderit sunt Lorem nostrud aute adipisicing ipsum et dolor magna ex dolore tempor. Quis est dolor velit amet consectetur ullamco sit laborum fugiat sint magna sunt nostrud. Qui minim laborum id cillum do.",
-        "fotografia": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhhWmcSb9CH1TeQsd_SoRDx8d4Ab72lfaNWwg_QVoLM87oggu9Z-DY1px63LXCsHRBdls&usqp=CAU",
+        "fotografia": "/public/fotos/jorge.jpg",
         "redes":[
             {
             "facebook": "https://www.facebook.com/jorgecarlos.perezbarja",
@@ -26,6 +26,26 @@
             "twitter": "https://www.twitter.com",
             "github": "https://www.github.com"
             } 
+        ],
+        "idiomas":[
+            {
+            "nombre":"Español",
+            "habla": true,
+            "escribe": true,
+            "lee": true
+            },
+            {
+                "nombre":"Inglés",
+                "habla": true,
+                "escribe": false,
+                "lee": true
+            },
+            {
+                "nombre":"Quechua",
+                "habla": false,
+                "escribe": false,
+                "lee": true
+            }  
         ],
         "educacion":[
             {
@@ -161,6 +181,12 @@
         "primerApellido": "Serrudo",
         "segundoApellido": "Chávez",
         "celular": "66666666",
+        "correo": "juanvictor@gmail.com",
+        "fechaNacimiento":"30-03-1990",
+        "lugarNacimiento":"Sucre",
+        "nacionalidad": "Boliviana",
+        "domicilio":"Calle Grau #123",
+        "sexo":"M",
         "esAbogado": 0,
         "esProfesor": 0,
         "esInformatico": 1,
@@ -174,7 +200,145 @@
                 "instagram": "https://wwww.instagram.com",
                 "linkedin": "https://www.linkedin.com"
             } 
+        ],
+        "idiomas":[
+            {
+            "nombre":"Español",
+            "habla": true,
+            "escribe": true,
+            "lee": true
+            },
+            {
+                "nombre":"Inglés",
+                "habla": true,
+                "escribe": false,
+                "lee": true
+            },
+            {
+                "nombre":"Quechua",
+                "habla": false,
+                "escribe": false,
+                "lee": true
+            }  
+        ],
+        "educacion":[
+            {
+                "id":"1",
+                "nombre":"Bachillerato",
+                "institucion": "Nacional Junín",
+                "descripcion": "Dolor id ullamco proident elit elit cupidatat cupidatat fugiat. Nostrud et laboris aliqua sint est aute aute minim. Quis nisi voluptate sit culpa ullamco proident tempor et.",
+                "fechaInicio":"1-febrero-2005",
+                "fechaFin": "30-noviembre-2010"
+            },
+            {
+                "id":"2",
+                "nombre":"Licenciatura en ingeniería de sistemas",
+                "institucion": "Domingo Savio",
+                "descripcion": "Dolor id ullamco proident elit elit cupidatat cupidatat fugiat. Nostrud et laboris aliqua sint est aute aute minim. Quis nisi voluptate sit culpa ullamco proident tempor et.",
+                "fechaInicio":"1-febrero-2005",
+                "fechaFin": "30-noviembre-2010"
+            } 
+        ],
+        "postGrado":[
+            {
+                "id":"1",
+                "nombre":"Diplomado en educación Superior",
+                "institucion": "Ministerio de Educación",
+                "descripcion": "Dolor id ullamco proident elit elit cupidatat cupidatat fugiat. Nostrud et laboris aliqua sint est aute aute minim. Quis nisi voluptate sit culpa ullamco proident tempor et.",
+                "fechaInicio":"1-febrero-2005",
+                "fechaFin": "30-noviembre-2010"
+            },
+            {
+                "id":"2",
+                "nombre":"Maestria en Ingeniería Legal",
+                "institucion": "U. S. F. X. CH.",
+                "descripcion": "Dolor id ullamco proident elit elit cupidatat cupidatat fugiat. Nostrud et laboris aliqua sint est aute aute minim. Quis nisi voluptate sit culpa ullamco proident tempor et.",
+                "fechaInicio":"1-febrero-2005",
+                "fechaFin": "30-noviembre-2010"
+            },
+            {
+                "id":"3",
+                "nombre":"Doctorado en seguridad informática",
+                "institucion": "Harvard",
+                "descripcion": "Dolor id ullamco proident elit elit cupidatat cupidatat fugiat. Nostrud et laboris aliqua sint est aute aute minim. Quis nisi voluptate sit culpa ullamco proident tempor et.",
+                "fechaInicio":"1-febrero-2005",
+                "fechaFin": "30-noviembre-2010"
+            } 
+        ],
+        "experiencia":[
+            {
+                "id":"1",
+                "nombre":"Técnico Medio",
+                "institucion": "Fiscalía General del Estado",
+                "descripcion": "Dolor id ullamco proident elit elit cupidatat cupidatat fugiat. Nostrud et laboris aliqua sint est aute aute minim. Quis nisi voluptate sit culpa ullamco proident tempor et.",
+                "fechaInicio":"1-febrero-2005",
+                "fechaFin": "30-noviembre-2010"
+            },
+            {
+                "id":"2",
+                "nombre":"Programador UX",
+                "institucion": "NASA",
+                "descripcion": "Dolor id ullamco proident elit elit cupidatat cupidatat fugiat. Nostrud et laboris aliqua sint est aute aute minim. Quis nisi voluptate sit culpa ullamco proident tempor et.",
+                "fechaInicio":"1-febrero-2005",
+                "fechaFin": "30-noviembre-2010"
+            }
+            
+        ],
+        
+        "cursos":[
+            {
+                "institucion":"Fiscalía General del Estado",
+                "nombre":"Capacitación en la ley 1179",
+                "duracion":"120 horas",
+                "fecha":"15-diciembre-2020",
+                "ubicacion":"Madrid"
+            },
+            {
+                "institucion":"Fiscalía General del Estado",
+                "nombre":"Taller de manejo del sistema de RR.HH.",
+                "duracion":"3 horas",
+                "fecha":"15-diciembre-2020",
+                "ubicacion":"Sucre"
+            },
+            {
+                "institucion":"Fiscalía General del Estado",
+                "nombre":"Curso de manejo de excel",
+                "duracion":"1 mes",
+                "fecha":"15-diciembre-2020",
+                "ubicacion":"La Paz"
+            },
+            {
+                "institucion":"Fiscalía General del Estado",
+                "nombre":"Taller de servicio al cliente",
+                "duracion":"3 horas",
+                "fecha":"15-diciembre-2020",
+                "ubicacion":"Sucre"
+            }
+        ],
+
+        "habilidades":[
+            {
+                "nombre":"HTML",
+                "porcentaje":"70",
+                "años":5
+            },
+            {
+                "nombre":"CSS",
+                "porcentaje":"60",
+                "años":3
+            },
+            {
+                "nombre":"Excel",
+                "porcentaje":90,
+                "años":10
+            },
+            {
+                "nombre":"VueJS",
+                "porcentaje":50,
+                "años":2
+            }
         ]
+
     },
     {
         "idDb": 3,

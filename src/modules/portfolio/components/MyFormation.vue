@@ -1,8 +1,6 @@
 <template>
   <div class="formacion"
     v-if="persona.educacion">
-    <h1 :style="{color:currentMode.color3}">Mi <span :style="{color:getColor}">formación</span></h1>
-    
         <h2 :style="{color:currentMode.color3}">Formación Académica</h2> <br>
         <div class="education">
             <div class="educationItem" v-for="educacion in persona.educacion" :style="{backgroundColor:currentMode.color2, borderLeft:'2px solid'+getColor}">

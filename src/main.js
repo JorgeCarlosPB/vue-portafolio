@@ -26,11 +26,12 @@ import { faPalette } from '@fortawesome/free-solid-svg-icons'
 import { faDroplet } from '@fortawesome/free-solid-svg-icons'
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faCheck } from '@fortawesome/free-solid-svg-icons'
 
 
 library.add(faUserSecret, faHomeUser, faUser, faBriefcase, faPhone, faFacebook, faInstagramSquare, 
             faSun, faMoon, faLinkedin, faTwitter, faGithub, faDownload, faPalette, faDroplet, 
-            faLocationDot, faEnvelope);
+            faLocationDot, faEnvelope, faCheck);
 
 
 const app = createApp(App)

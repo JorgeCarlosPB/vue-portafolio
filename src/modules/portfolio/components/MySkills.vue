@@ -1,5 +1,5 @@
 <template>
-<h1 v-if="persona.habilidades" :style="{color:currentMode.color3}">Otros conocimientos</h1>
+<!-- <h1 v-if="persona.habilidades" :style="{color:currentMode.color3}">Otros conocimientos</h1> -->
 <div class="contenedor"
     v-if="persona.habilidades">
     
@@ -36,10 +36,6 @@ export default {
       setup(){
       const {currentMode, getColor} = useThemes()
       const {persona}=getPerson()
-    //   console.log((persona.value.educacion).length)
-    //   console.log(persona.value.educacion[0].nombre)
-
-    //console.log(typeof(persona.value.habilidades[0].porcentaje))
 
     return{
       currentMode,

@@ -14,25 +14,25 @@
         <div class="detalle">
           <h3 :style="{color:currentMode.color3}">¿Quién soy?</h3>
           <h2 :style="{color:currentMode.color3}">Mi nombre es {{persona.nombre}} {{persona.primerApellido}} {{persona.segudnoApellido}},
-              soy <span :style="{color:getColor}">{{persona.profesion}}</span>
+              soy <span :style="{color:getColor, textTransform:'lowercase'}">{{persona.profesion}}</span>
           </h2>
           <p>{{persona.descripcion}}</p>
         </div>
 
         <PersonalInformation class="pinfo"/>
 
-        <button class="descarga" :style="{backgroundColor:getColor}">Descargar CV  <font-awesome-icon icon="fa-solid fa-download" /></button>
+        <button class="descarga" :style="{backgroundColor:getColor, border:'2px solid '+currentMode.color3}">Descargar CV  <font-awesome-icon icon="fa-solid fa-download" /></button>
         
-        <SocialNet/>
+        <SocialNet class="redes"/>
 
       </div>
     </div>
 
-    <MyFormation/>
 
-    <MyPostgrades/>
+    <h1 v-if="persona.habilidades" :style="{color:currentMode.color3}" class="tituloSkills">Mis conocimientos</h1>
+    <MySkills class="skills"/>
 
-    <MySkills/>
+    <MyLanguages class="idiomas"/>
 
   </div>
 </template>
@@ -49,7 +49,8 @@ export default {
       MyFormation: defineAsyncComponent(()=>import('../components/MyFormation.vue')),
       MySkills: defineAsyncComponent(()=>import('../components/MySkills.vue')),
       PersonalInformation: defineAsyncComponent(()=>import('../components/PersonalInformation.vue')),
-      MyPostgrades: defineAsyncComponent(()=>import('../components/MyPostgrades.vue'))
+      MyPostgrades: defineAsyncComponent(()=>import('../components/MyPostgrades.vue')),
+      MyLanguages: defineAsyncComponent(()=>import('../components/MyLanguages.vue'))
   },
   
   setup(){
@@ -108,17 +109,26 @@ export default {
         padding: 5px;
         border-radius: 5px;
         background-color: #ff651c;
-        color: white;
+        color: black;
       }
 
       .descarga:hover{
-        border: solid 2px #ff651c;
+        padding: 7px;
         background-color: white;
         color: black;
       }
-    }
 
-    
+      .redes{
+        margin: 15px 0;
+      }
+
+      
+    }
+  }
+
+  .tituloSkills{
+    text-align: center;
+    margin: 25px 0px;
   }
 }
 

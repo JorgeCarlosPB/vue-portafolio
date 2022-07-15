@@ -10,7 +10,7 @@
                 <font-awesome-icon icon="fa-solid fa-user" size="2x" :style="{color: currentMode.color3}" class="icono"/>
             </router-link> 
 
-            <router-link :to="{name: 'pprojects'}"><span class="folio" :style="{color:getColor}">Portafolio</span> <br>
+            <router-link :to="{name: 'pformation'}"><span class="folio" :style="{color:getColor}">Portafolio</span> <br>
                 <font-awesome-icon icon="fa-solid fa-briefcase" size="2x" :style="{color: currentMode.color3}" class="icono"/>
             </router-link>
 

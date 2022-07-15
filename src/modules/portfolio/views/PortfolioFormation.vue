@@ -1,9 +1,16 @@
 <template>
-  <MySkills/>
+  
+  <h1 :style="{color:currentMode.color3}" class="titulo">Mi <span :style="{color:getColor}" >formación</span></h1>
+
+  <MyFormation/>
 
   <MyPostgrades/>
 
+  <MyExperience/>
+
   <MyCourses/>
+
+  <MySkills/>
 
 </template>
 
@@ -11,17 +18,19 @@
 import { defineAsyncComponent } from 'vue';
 import getPerson from '../composables/getPerson';
 import useThemes from '../composables/useThemes';
+
 export default {
   components: { 
       SocialNet: defineAsyncComponent(()=>import('../components/SocialNet.vue')),
-      MyResume: defineAsyncComponent(()=>import('../components/MyFormation.vue')),
+      MyFormation: defineAsyncComponent(()=>import('../components/MyFormation.vue')),
       MySkills: defineAsyncComponent(()=>import('../components/MySkills.vue')),
       MyCourses: defineAsyncComponent(()=>import('../components/MyCourses.vue')),
-      MyPostgrades: defineAsyncComponent(()=>import('../components/MyPostgrades.vue'))
+      MyPostgrades: defineAsyncComponent(()=>import('../components/MyPostgrades.vue')),
+      MyExperience: defineAsyncComponent(()=>import('../components/MyExperience.vue'))
   },
 
   setup(){
-    const {currentMode} = useThemes()
+    const {currentMode, getColor} = useThemes()
     const {persona}=getPerson()
    
 
@@ -29,6 +38,7 @@ export default {
 
     return{
       currentMode,
+      getColor,
       persona
       
     }
@@ -38,6 +48,13 @@ export default {
 
 
 
-<style>
+<style scoped lang="scss">
+
+.titulo{
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+
 
 </style>

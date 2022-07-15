@@ -73,12 +73,12 @@ export default {
 
 @media (max-width: 650px) {
 
-    .formacion{
+    .postgrado{
 
-        .education{
+        .postgrados{
             flex-direction: column;
 
-            .educationItem{
+            .postgradoItem{
                 width: 100%;
             }
         }

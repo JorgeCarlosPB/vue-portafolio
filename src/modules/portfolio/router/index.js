@@ -14,9 +14,9 @@ export default{
             component: () => import(/* webpackChunkName: "pabout" */ '@/modules/portfolio/views/PortfolioAbout.vue')
         },
         {
-            path: 'projects',
-            name: 'pprojects',
-            component: () => import(/* webpackChunkName: "pabout" */ '@/modules/portfolio/views/PortfolioProjects.vue')
+            path: 'formation',
+            name: 'pformation',
+            component: () => import(/* webpackChunkName: "pabout" */ '@/modules/portfolio/views/PortfolioFormation.vue')
         },
         {
             path: 'contact',

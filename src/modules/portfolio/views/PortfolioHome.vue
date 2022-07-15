@@ -20,12 +20,12 @@
       
     
       <div class="buttons">
-        <button class="btn btn-lg btn primary active"
+        <button class="boton"
             @click="$router.push({name:'pcontact'})" :style="{backgroundColor:getColor}">
           Contáctame
         </button>
 
-        <button class="btn"
+        <button class="boton"
              @click="$router.push({name:'pabout', params: {ci: persona.numeroDocumento}}) " :style="{backgroundColor:getColor}">
           Acerca de mí
         </button>
@@ -125,20 +125,28 @@ export default {
 
     .detalle p{
       color: #888888;
-    text-align: center;
+      text-align: center;
     }
+    .buttons{
+      display: flex;
+      justify-content: center;
+
+      .boton{
+        color: black;
+        font-size: medium;
+        margin: 5px;
+        padding: 5px 10px;
+        border-radius: 5px;
+      }
+
+      .boton:hover{
+        color: black;
+        padding:5px 13px;
+      }
+  }
 }
 
-.buttons{
-    display: flex;
-    justify-content: center;
 
-    button{
-      color: white;
-      font-size: medium;
-      margin: 5px;
-    }
-}
 
 @media (max-width: 575.98px) { 
  .contenido{

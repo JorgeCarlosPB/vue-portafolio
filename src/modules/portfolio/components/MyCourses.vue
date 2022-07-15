@@ -1,6 +1,6 @@
 <template>
     <div class="course">
-        <h1  :style="{color:currentMode.color3}">Cursos y talleres</h1>
+        <h2  :style="{color:currentMode.color3}">Cursos y talleres</h2>
 
         <div class="courses">
             <div class="courseItem" v-for="course in persona.cursos" :style="{backgroundColor:currentMode.color2, borderLeft:'2px solid'+getColor}">
@@ -48,7 +48,7 @@ export default {
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    h1{
+    h2{
         text-align: center;
     }
 
