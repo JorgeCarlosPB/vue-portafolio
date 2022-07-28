@@ -1,13 +1,13 @@
 <template>
 
 <div class="idiomas">
-    <h1 class="titulo">Idiomas</h1>
+    <h1 class="titulo" :style="{color:currentMode.color3}">Idiomas</h1>
     <table class="tabla">
         <tr class="cabecera">
-            <th>Idiomas</th>
-            <th>Habla</th>
-            <th>Escribe</th>
-            <th>Lee</th>
+            <th :style="{color:currentMode.color3}">Idiomas</th>
+            <th :style="{color:currentMode.color3}">Habla</th>
+            <th :style="{color:currentMode.color3}">Escribe</th>
+            <th :style="{color:currentMode.color3}">Lee</th>
         </tr>
         <tr class="separador">
             <th colspan="4"> <div class="linea" :style="{backgroundColor:currentMode.color3}"></div></th>  
@@ -15,7 +15,7 @@
         
 
         <tr v-for="idioma in persona.idiomas" class="contenido">
-            <td class="nombre">{{idioma.nombre}}</td>
+            <td class="nombre" :style="{color:currentMode.color3}">{{idioma.nombre}}</td>
             <td class="check"><font-awesome-icon icon="fa-solid fa-check" v-if="idioma.habla" :style="{color:getColor}"/></td>
             <td class="check"><font-awesome-icon icon="fa-solid fa-check" v-if="idioma.escribe" :style="{color:getColor}"/></td>
             <td class="check"><font-awesome-icon icon="fa-solid fa-check" v-if="idioma.lee" :style="{color:getColor}"/></td>
